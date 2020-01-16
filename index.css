@@ -1,0 +1,53 @@
+body {
+    margin:0;
+    border:0;
+    display:flex;
+    flex-direction: column;
+    background-color:goldenrod;
+}
+a {
+    color:black;
+    text-decoration: none;
+}
+h2 {
+    font-size:50px;
+}
+.navbar-div {
+    height:20vh;
+    width:100%;
+    background-color: red;
+}
+
+.redirect-div {
+    display:grid;
+    grid-template-columns: 1fr 4fr 4fr 1fr;
+    justify-items:center;
+    width:100%;
+    height:80vh;
+}
+
+.option-div {
+    display:flex;
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: black;
+    justify-content:center;    
+    width:100%;
+    height:100%;
+    text-align:center;
+    align-items:center;
+}
+
+.ds-div {
+    grid-column: 2/3;
+    background-color: rgba(30,50,180,1);
+}
+
+.ds-div:hover {
+    background-color: rgba(100,50,180,0);
+}
+
+.web-div {
+    grid-column: 3/4;   
+}
+
