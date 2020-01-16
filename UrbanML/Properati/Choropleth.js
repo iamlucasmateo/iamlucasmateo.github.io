@@ -2,6 +2,7 @@ var mapboxAccessToken = "pk.eyJ1IjoibHVjY2hpbmkyMDIiLCJhIjoiY2s0ZjAydWsxMGpldzNk
 var map = L.map('map').setView([-34.610824, -58.451452], 12);
 var buttons = document.querySelectorAll(".buttons");
 var state = "Price"
+alert('OK')
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=' + mapboxAccessToken, {
     id: 'mapbox/light-v9',
