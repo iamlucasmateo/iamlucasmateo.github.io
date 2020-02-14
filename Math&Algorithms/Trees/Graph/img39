@@ -1,0 +1,76 @@
+digraph female_branch {
+	node [nodesep=10.00 shape=record]
+	legend [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent'><B>Last feature reached for this branch</B></TD></TR>
+  <TR><TD color='transparent'>We generate the leaves and terminate this branch's recursion</TD></TR>
+</TABLE>>]
+	"female-class" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent' >Univocal: <b>no</b></TD></TR>
+  <TR><TD color='transparent' >Features left: <b>1</b></TD></TR>
+  <TR><TD color='transparent' >Max info gain: <b>0.2277</b></TD></TR>
+  <TR><TD color='transparent'>Selected feature: <b>Class</b></TD></TR>
+</TABLE>>]
+	"female-first" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent'>Univocal: <b>no</b></TD></TR>
+  <TR><TD color='transparent' bgcolor='lightgray'>Features Left: <b>0</b></TD></TR>
+</TABLE>>]
+	"female-first-child" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent'></TD></TR>
+  <TR><TD color='transparent'></TD></TR>
+  <TR><TD color='transparent'></TD></TR>
+</TABLE>> style=invisible]
+	"female-first-adult" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent'></TD></TR>
+  <TR><TD color='transparent'></TD></TR>
+  <TR><TD color='transparent'></TD></TR>
+</TABLE>> style=invisible]
+	"female-second" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent' ></TD></TR>
+  <TR><TD color='transparent'></TD></TR>
+</TABLE>> style=invisible]
+	"female-second-child" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent'></TD></TR>
+  <TR><TD color='transparent'></TD></TR>
+  <TR><TD color='transparent'></TD></TR>
+</TABLE>> style=invisible]
+	"female-second-adult" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent'></TD></TR>
+  <TR><TD color='transparent'></TD></TR>
+  <TR><TD color='transparent'></TD></TR>
+</TABLE>> style=invisible]
+	"female-third" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent' ></TD></TR>
+  <TR><TD color='transparent'></TD></TR>
+</TABLE>> style=invisible]
+	"female-third-child" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent'></TD></TR>
+  <TR><TD color='transparent'></TD></TR>
+  <TR><TD color='transparent'></TD></TR>
+</TABLE>> style=invisible]
+	"female-third-adult" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent'></TD></TR>
+  <TR><TD color='transparent'></TD></TR>
+  <TR><TD color='transparent'></TD></TR>
+</TABLE>> style=invisible]
+	legend -> "female-class" [label=Female]
+	"female-class" -> "female-first" [xlabel="First Class"]
+	"female-first" -> "female-first-child" [xlabel=Child]
+	"female-first" -> "female-first-adult" [label=Adult]
+	"female-class" -> "female-second" [label="Second Class"]
+	"female-second" -> "female-second-child" [arrowhead=none style=invisible xlabel=Child]
+	"female-second" -> "female-second-adult" [label=Adult arrowhead=none style=invisible]
+	"female-class" -> "female-third" [label="Third Class"]
+	"female-third" -> "female-third-child" [arrowhead=none style=invisible xlabel=Child]
+	"female-third" -> "female-third-adult" [label=Adult arrowhead=none style=invisible]
+}

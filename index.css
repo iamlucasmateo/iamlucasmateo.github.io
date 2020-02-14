@@ -1,53 +1,219 @@
-body {
+* {
     margin:0;
     border:0;
-    display:flex;
-    flex-direction: column;
-    background-color:goldenrod;
 }
-a {
-    color:black;
+body {
+    font-family: 'Merriweather', serif;
+}
+
+/* Navbar */
+#navbar {
+    height:15vh;
+    width:100%;
+    position:fixed;
+    display:flex;
+    justify-items:space-evenly;
+    align-items: center;
+    padding:0 1em;
+    background-color: #2B3D41;
+    color: #F4CEAD;
+    font-size:2em;
+    font-family: 'Montserrat', sans-serif;
+}
+.logo {
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    width:2.5em;
+    margin-right:auto;
+    font-family: 'Montserrat', sans-serif;
+    cursor:pointer;
+
+}
+.logo:hover {
+    border-radius:50%;
+    background-color: #F4CEAD;
+    /* border: 1px solid #2B3D41 */
+    box-shadow: -10px -10px 30px #F4CEAD;
+    color: #2B3D41;
+}
+.logo a {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+    width:100%;
+    text-decoration: none;
+    color:#F4CEAD;
+    transition: all 500ms ease;
+}
+.logo a:hover {
+    color:#2B3D41
+}
+.nav-link-menu {
+    padding-right:1em;
+    display:flex;
+    height:100%;
+}
+.nav-link-div {
+    display:flex;
+    justify-content:center;
+    height:100%;
+    width:100%;
+    margin:0 1em 0 0;
+    transition: all 500ms ease;   
+    
+}
+.nav-link-div:hover {
+    background-color: #F4CEAD;
+    box-shadow: -10px -10px 30px #F4CEAD;
+    color:#2B3D41;
+}
+.nav-link-div a {
+    height:100%;
+    width:100%;
+    padding: 0 0.5em; 
+    text-decoration: none;
+    display:flex;
+    align-items: center;
+    color:#F4CEAD;
+    transition: all 500ms ease;
+}
+
+.nav-link-div a:hover {
+    color: #2B3D41;
+    background-color: #F4CEAD;
+}
+
+
+
+/* Welcome section */
+#welcome-section {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background-color: #F4CEAD;
+    color:#2B3D41  
+}
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size:7em;
+}
+
+h2,h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#welcome-section h2 {
+    font-size:4em;
+    font-style: italic;
+}
+
+
+/* Projects section */
+#projects {
+    height:auto;
+    background-color: #421F3D;
+    color:#F4CEAD;
+    display:flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+}
+#projects h2 {
+    display:inline-flex;
+    font-size:3em;
+    /* font-family: 'Montserrat', */
+}
+.project-cards-div {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items:center;
+    padding:1em;
+    width:50%;
+    grid-gap:1%;
+    height:auto;
+}
+.project-cards-div a { 
     text-decoration: none;
 }
-h2 {
-    font-size:50px;
-}
-.navbar-div {
-    height:20vh;
-    width:100%;
-    background-color: red;
-}
-
-.redirect-div {
-    display:grid;
-    grid-template-columns: 1fr 4fr 4fr 1fr;
-    justify-items:center;
-    width:100%;
-    height:80vh;
-}
-
-.option-div {
+.project-tile {
+    height:auto;
+    width:12vw;
+    border-radius:10%;
+    background-color: #F4CEAD;
+    color:#2B1428;
+    padding:1.5em;
     display:flex;
-    border-width: 0 1px;
-    border-style: solid;
-    border-color: black;
-    justify-content:center;    
-    width:100%;
+    flex-direction: column;
+    align-items: center;
+    margin:1em;
+    box-sizing:border-box;
+}
+.project-tile:hover {
+    background-color:#2B1428;
+    color: #F4CEAD;
+    box-shadow: -10px -10px 30px #F4CEAD;
+}
+.project-tile h3 {
+    font-size:1em;
+    padding:0.5em;
+    text-align: center;
+}
+.front {
     height:100%;
-    text-align:center;
-    align-items:center;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    padding:0.5em;   
+}
+.project-tile i {
+    font-size:5em;
+}
+/* Contact section */
+#contact-section {
+    background-color: #FFE3DC;
+    color:#421F3D;
+    height:40vh;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr 1fr;
+    justify-items: center;
+}
+#contact-section h2 {
+    font-size:5em;
+    align-self: end;
+}
+.footer-link {
+    width:30%;
+    height:15vh;
+    font-size:1.5em;
+    display:flex;
+    justify-content: center;
+    transition: all 300ms ease;
+    align-items: start;
+}
+.footer-link:hover{ 
+    transform: translate(0px, 7px)
+} 
+.footer-link a {
+    text-decoration: none;
+    color: #421F3D;
+    margin-left:0.5em;
 }
 
-.ds-div {
-    grid-column: 2/3;
-    background-color: rgba(30,50,180,1);
-}
-
-.ds-div:hover {
-    background-color: rgba(100,50,180,0);
-}
-
-.web-div {
-    grid-column: 3/4;   
+@media (max-width:800px) {
+    .project-cards-div {
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+    }
+    .project-tile {
+        width:50vw;
+    }
 }
 

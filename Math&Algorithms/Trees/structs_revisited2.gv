@@ -1,0 +1,72 @@
+digraph structs {
+	node [nodesep=10.00 shape=record]
+	sex [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent' >Male branch</TD></TR>
+</TABLE>>]
+	"male-class" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent' >Univocal: no</TD></TR>
+  <TR><TD color='transparent'>Features left: 1</TD></TR>
+  <TR><TD color='transparent'>Max info gain: 0.0415</TD></TR>
+  <TR><TD color='transparent'>Selected feature: Class</TD></TR>
+</TABLE>>]
+	"male-first" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent' >Univocal: no</TD></TR>
+  <TR><TD color='transparent'>Features left: 1</TD></TR>
+  <TR><TD color='transparent'>Last feature: Age</TD></TR>
+</TABLE>>]
+	"male-first-child" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent'>Prediction: Alive</TD></TR>
+  <TR><TD color='transparent'>Prediction error: 0</TD></TR>
+</TABLE>>]
+	"male-first-adult" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent'>Prediction: Dead</TD></TR>
+  <TR><TD color='transparent'>Prediction error: 0.3776</TD></TR>
+</TABLE>>]
+	"male-second" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent' >Univocal: no</TD></TR>
+  <TR><TD color='transparent'>Features left: 1</TD></TR>
+  <TR><TD color='transparent'>Last feature: Age</TD></TR>
+</TABLE>>]
+	"male-second-child" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent'>Prediction: Alive</TD></TR>
+  <TR><TD color='transparent'>Prediction error: 0</TD></TR>
+</TABLE>>]
+	"male-second-adult" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent'>Prediction: Dead</TD></TR>
+  <TR><TD color='transparent'>Prediction error: 0.0667</TD></TR>
+</TABLE>>]
+	"male-third" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent' >Univocal: no</TD></TR>
+  <TR><TD color='transparent'>Features left: 1</TD></TR>
+  <TR><TD color='transparent'>Last feature: Age</TD></TR>
+</TABLE>>]
+	"male-third-child" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent'>Prediction: Dead</TD></TR>
+  <TR><TD color='transparent'>Prediction error: 0.3214</TD></TR>
+</TABLE>>]
+	"male-third-adult" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent'>Prediction: Dead</TD></TR>
+  <TR><TD color='transparent'>Prediction error: 0.1289</TD></TR>
+</TABLE>>]
+	sex -> "male-class"
+	"male-class" -> "male-first" [xlabel="First Class"]
+	"male-first" -> "male-first-child" [xlabel=Child]
+	"male-first" -> "male-first-adult" [label=Adult]
+	"male-class" -> "male-second" [label="Second Class"]
+	"male-second" -> "male-second-child" [xlabel=Child]
+	"male-second" -> "male-second-adult" [label=Adult]
+	"male-class" -> "male-third" [label="Third Class"]
+	"male-third" -> "male-third-child" [xlabel=Child]
+	"male-third" -> "male-third-adult" [label=Adult]
+}

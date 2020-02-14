@@ -4,32 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Welcome</title>
     <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/573deb7456.js" crossorigin="anonymous"></script>
+    <title>Main Page</title>
 </head>
 <body>
-    <div class='navbar-div'>
-
-    </div>
-
-    <div class='redirect-div'>
-        <div class='ds-div option-div'>
-            <div class='h2-div'>
-                <a href="UrbanML/Properati/Choropleth.html">
-                    <h2 class='h2'>Data Science</h2>
-                </a>
-                
+    <nav id="navbar">
+        <div class="logo">
+            <a href="#welcome-section">LM</a>
+        </div>
+        <div class="nav-link-menu">
+            <div class="nav-link-div">
+                <a href="#projects">Projects</a>
+            </div>
+            <div class="nav-link-div">
+                <a href="#contact-section">Contact</a>
             </div>
         </div>
+    </nav>
 
-        <div class='web-div option-div'>
-            <div class='h2-div'>
-                <h2 class='h2'>Web development</h2>
-            </div>
+            
+
+    <section id="welcome-section">
+        <h1>Lucas Mateo</h1>
+        <h2>Hi there!</h2>
+    </section>
+
+    <section id="projects">
+        <h2>Portfolio</h2>
+        <div class="project-cards-div">
+            <a href="HousingDataAnalysis/subteEstudio.html">
+                <div class="project-tile">
+                    <!-- Link -->
+                    <h3>Housing Data Analysis</h3>
+                    <i class="fas fa-home"></i>
+                </div>
+            </a>
+            <a href="MLPredictionProperati/knnModels.html">
+                <div class="project-tile">
+                    <!-- Link -->
+                    <h3>Machine Learning Predictions<br></h3>
+                    <i class="fas fa-eye"></i></i>
+                </div>
+            </a>
+            <a href="#">
+                <div class="project-tile">
+                    <!-- Link -->
+                    <h3>Math & Algorithms</h3>
+                    <i class="fas fa-dice-d6"></i>
+                </div>
+            </a>
+            <a href="WalkingDirections/walkingDirections.html">
+                <div class="project-tile">
+                    <!-- Link -->
+                    <h3>Walking Directions</h3>
+                    <i class="fas fa-chess-board"></i>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="project-tile">
+                    <!-- Link -->
+                    <h3>Economics & ML</h3>
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+            </a>
+
+            <a href="https://codepen.io/lucasmateo" target='blank'>
+                <div class="project-tile">
+                    <!-- Link -->
+                    <h3>Web Design Projects</h3>
+                    <i class="fas fa-code"></i>
+                </div>
+            </a>
+
         </div>
-    </div>
 
+    </section>
 
-<script href='index.js'></script>
+    <section id="contact-section">
+        <h2>Let's talk!</h2>
+        <div class="footer-link">
+            <i class="fas fa-laptop-code"></i>
+            <a href="https://codepen.io/lucasmateo" id="profile-link">FCC Profile</a>
+        </div>
+
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
 </html>

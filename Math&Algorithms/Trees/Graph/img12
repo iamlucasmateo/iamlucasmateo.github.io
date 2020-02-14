@@ -1,0 +1,20 @@
+digraph first_rec {
+	node [nodesep=10.00 shape=record]
+	legend [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent'><B>Step 4</B></TD></TR>
+  <TR><TD color='transparent'>Select the feature that maximizes information gain</TD></TR>
+</TABLE>>]
+	sex [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+    <TR><TD color='transparent'>Univocal: <b>no</b></TD></TR>
+    <TR><TD color='transparent' >Features left: <b>2</b></TD></TR>
+    <TR><TD color='transparent'>Max info gain: <b>0.216</b></TD></TR>
+    <TR><TD color='transparent'  bgcolor='lightgray'>Selected feature: <b>Sex</b></TD></TR>
+</TABLE>>]
+	"male-class" [style=invisible]
+	"female-class" [style=invisible]
+	legend -> sex [arrowhead=none style=invisible]
+	sex -> "male-class" [arrowhead=none style=invisible]
+	sex -> "female-class" [arrowhead=none style=invisible]
+}

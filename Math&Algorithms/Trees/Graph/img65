@@ -1,0 +1,76 @@
+digraph female_branch {
+	node [nodesep=10.00 shape=record]
+	legend [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent'><B>Final predictions for this branch</B></TD></TR>
+  <TR><TD color='transparent'>The algorithm would now go and proceed with the male branch</TD></TR>
+</TABLE>>]
+	"female-class" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent' >Univocal: <b>no</b></TD></TR>
+  <TR><TD color='transparent' >Features left: <b>1</b></TD></TR>
+  <TR><TD color='transparent' >Max info gain: <b>0.2277</b></TD></TR>
+  <TR><TD color='transparent'>Selected feature: <b>Class</b></TD></TR>
+</TABLE>>]
+	"female-first" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent'>Univocal: <b>no</b></TD></TR>
+  <TR><TD color='transparent'>Features Left: <b>0</b></TD></TR>
+</TABLE>>]
+	"female-first-child" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent'>Prediction: <b>Alive</b></TD></TR>
+  <TR><TD color='transparent' >Samples: <b>3</b></TD></TR>
+  <TR><TD color='transparent'>Prediction error: <b>0.3333</b></TD></TR>
+</TABLE>>]
+	"female-first-adult" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent' >Prediction: <b>Alive</b></TD></TR>
+  <TR><TD color='transparent' >Samples: <b>82</b></TD></TR>
+  <TR><TD color='transparent' >Prediction error: <b>0.0244</b></TD></TR>
+</TABLE>>]
+	"female-second" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent' >Univocal: <b>no</b></TD></TR>
+   <TR><TD color='transparent'>Features Left: <b>0</b></TD></TR>
+</TABLE>>]
+	"female-second-child" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent'>Prediction: <b>Alive</b></TD></TR>
+   <TR><TD color='transparent'>Samples: <b>10</b></TD></TR>
+   <TR><TD color='transparent'>Prediction error: <b>0</b></TD></TR>
+</TABLE>>]
+	"female-second-adult" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent'>Prediction: <b>Alive</b></TD></TR>
+   <TR><TD color='transparent'>Samples: <b>64</b></TD></TR>
+   <TR><TD color='transparent'>Prediction error: <b>0.0938</b></TD></TR>
+</TABLE>>]
+	"female-third" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent'>Univocal: <b>no</b></TD></TR>
+   <TR><TD color='transparent' >Features Left: <b>0</b></TD></TR>
+</TABLE>>]
+	"female-third-child" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent'>Prediction: <b>Alive</b></TD></TR>
+   <TR><TD color='transparent'>Samples: <b>72</b></TD></TR>
+   <TR><TD color='transparent'>Prediction error: <b>0.4667</b></TD></TR>
+</TABLE>>]
+	"female-third-adult" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent'>Prediction: <b>Dead</b></TD></TR>
+   <TR><TD color='transparent'>Samples: <b>30</b></TD></TR>
+   <TR><TD color='transparent'>Prediction error: <b>0.4306</b></TD></TR>
+</TABLE>>]
+	legend -> "female-class" [label=Female]
+	"female-class" -> "female-first" [xlabel="First Class"]
+	"female-first" -> "female-first-child" [xlabel=Child]
+	"female-first" -> "female-first-adult" [label=Adult]
+	"female-class" -> "female-second" [label="Second Class"]
+	"female-second" -> "female-second-child" [xlabel=Child]
+	"female-second" -> "female-second-adult" [label=Adult]
+	"female-class" -> "female-third" [label="Third Class"]
+	"female-third" -> "female-third-child" [xlabel=Child]
+	"female-third" -> "female-third-adult" [label=Adult]
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ML Predictions</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="knnModels.css"/>
+
+</head>
+<body>
+  <div class='main-div'>
+    <div class='title-div'>
+    <h1>Machine Learning: mercado inmobiliario</h1>
+    <h2>Visualización de modelos predictivos</h2>
+    </div>
+
+    <div class='paragraph'>
+      <section>
+        <p>En esta página se presenta un visualización interactiva de los modelos de Machine Learning desarrollados en <a href="#">este repositorio de Notebooks</a>. 
+        El objetivo de los modelos es realizar predicciones sobre los precios de las propiedades en la Ciudad de Buenos Aires, en base a la información histórica proveída por <a href="https://www.properati.com.ar/data/" target='blank'>Properati</a>.
+        Es decir, se trata de modelos de regresión donde el target es el precio y los features, una serie de datos que se tiene de la propiedad. 
+        En otro Notebook se llevo a cabo previamente el <a href="#">procesamiento de los datos</a> para poder trabajar con estos modelos de Machine Learning.
+          </p>
+        <p>
+          Cada modelo presenta sus particularidades, pero hay algunos elementos en común en las visualizaciones. Se trabaja siempre con la misma muestra de test (que puede verse inmediatamente en el mapa).
+          Los tamaños de los puntos en el mapa son proporcionales al error (RMSE) correspondiente a ese elemento para el modelo en cuestión, de manera que son distintos para cada modelo.
+          En el caso de los modelos kNN, podrá observarse en el mapa el grupo de "vecinos" a partir de los cuales se hizo la inferencia. Dichos vecinos tienen un tamaño proporcional a su superficie y un una intensidad de color proporcional a su precio por m2.
+          A su vez, para cada modelo pueden observarse una serie de gráficos, como la distribución de los errores y scatterplots con respecto a los features. 
+        </p>
+        
+      </section>
+    </div>
+
+    <div class='map-and'>
+        <div id="map"></div>
+      <div class='model-info'>
+        <div class="buttons-div">
+          <button class="buttons" id="00naifKNN">Naïf kNN</button>
+          <button class="buttons" id="01gridKNN">Grid kNN</button>
+        </div>
+        <div class='model-text'>
+          <p class='pModelo'>Haga click en un modelo para visualizar</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+<script src="knnSamples.js"></script>
+<script src="knnBarrios.js"></script>
+<script src="knnModels.js"></script>
+  
+  
+</body>
+</html>

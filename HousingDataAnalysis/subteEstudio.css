@@ -1,0 +1,88 @@
+/* Pendiente: ponerle un poco de amor */
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size:2em;
+}
+
+.main-div {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2% 12%;
+}
+
+/* Pendiente:hacerlo responsive */
+#map {
+    width: 800px;
+    height: 600px;
+    margin:0;
+    border:1px solid #2B1428;
+}
+
+#map2 {
+    width: 800px;
+    height: 600px;
+    margin:0;
+    border: 1px solid black;
+}
+
+
+/* styling info */
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+/* styling legend */
+.legend {
+    line-height: 18px;
+    color: #555;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+.custom .leaflet-popup-tip,
+.custom .leaflet-popup-content-wrapper {
+    background: #e93434;
+    color: #ffffff;
+    max-width: 800,
+}
+
+.map-div {
+    display:flex;
+    justify-content: center;
+    width:auto;
+    height:80vh;
+    margin:0;
+}
+
+.map-div2 {
+    display:flex;
+    justify-content: center;
+    width:auto;
+    height:80vh;
+    margin:10%;
+}

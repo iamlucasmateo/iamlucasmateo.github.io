@@ -1,0 +1,21 @@
+digraph first_rec {
+	node [nodesep=10.00 shape=record]
+	legend [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD color='transparent'><B>Step 1</B></TD></TR>
+  <TR><TD color='transparent'>Check if the ouput variable has only one category</TD></TR>
+   <TR><TD color='transparent'>If False, then proceed with the algorithm</TD></TR>
+</TABLE>>]
+	sex [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+    <TR><TD color='transparent' bgcolor='lightgray'>Univocal: <b>no</b></TD></TR>
+    <TR><TD color='transparent' >Features left: </TD></TR>
+    <TR><TD color='transparent'>Max info gain: </TD></TR>
+    <TR><TD color='transparent' >Selected feature: </TD></TR>
+</TABLE>>]
+	"male-class" [style=invisible]
+	"female-class" [style=invisible]
+	legend -> sex [arrowhead=none style=invisible]
+	sex -> "male-class" [arrowhead=none style=invisible]
+	sex -> "female-class" [arrowhead=none style=invisible]
+}
