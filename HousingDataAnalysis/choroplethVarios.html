@@ -11,20 +11,75 @@
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
     integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
     crossorigin=""></script>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat&display=swap" rel="stylesheet">
     <script type="text/javascript" src="BAData.js"></script>
     <link rel="stylesheet" href="choroplethVarios.css"/>
 
 </head>
 <body>
-    <h1>Choropleth</h1>
+  <div class="main-div">
+    <div class='title-div'>
+      <h1>Mercado Inmobiliario de Buenos Aires</h1>
+      <h2>Resumen y análisis de los datos</h2>
+    </div>
+
+    <div class='paragraph' id='ver-detalle'>
+      <p>Haga click en cada barrio para ver detalle. Información debajo del mapa.</p>
+    </div>
+
     <div class="buttons-div">
-      <button class="buttons" id="0">Map Price M2</button class="loco">
+      <button class="buttons" id="0">Map Price M2</button>
       <button class="buttons" id="1">Map Property Type</button>
       <button class="buttons" id="2">Map Superficie Promedio</button>
     </div>
 
-    <p><div id="map"></div></p>
+    <div class='map-container'><div id="map"></div></div>
+
+    <div class="paragraph">
+      <section>
+        <p>En esta página se presenta un dataset con información sobre propiedades residenciales en venta en la Ciudad de Buenos Aires. Los datos originales fueron extraídos 
+          de <a href='https://www.properati.com.ar'>Properati</a>. El procesamiento de la información se llevó a cabo en 
+          <a href='https://github.com/iamlucasmateo/dsHousingAnalysis/blob/master/Notebooks/Mercado%20Inmobiliario%20-%20Data%20Preprocessing%20%26%20Exploration.ipynb'>
+          este Jupyter notebook,</a> utilizando <strong>Python</strong> como lenguaje y las librerías <strong>numpy, pandas, geopandas, seaborn, Matplotlib y sci-kit learn.</strong>
+          Dicho procesamiento implicó, entre otras cosas, el filtrado de datos ubicados en la Ciudad de Buenos Aires, de datos faltantes (<b>NaNs</b>),
+          y de datos imputados erróneamente, balanceando el tamaño del dataset con la utilidad de la información. </p> 
+          
+          <p>Se realizó también trabajo de feature engineering, operando directamente sobre columnas existentes (por ejemplo, para el cálculo
+            del precio por m2) y trabajando con bases de datos públicas (para la localización de cada propiedad en su barrio correspondiente),
+            proveídas por <a href='https://data.buenosaires.gob.ar/' target='blank'>BA Data</a>. En ese contexto resultó útil <strong>geopandas</strong>.
+
+          </p>
+
+        <p>El mapa superior presenta un resumen de algunas variables relevantes agrupadas por barrio en <strong>pandas</strong>. 
+          (Haciendo click en cada uno de los correspondientes <strong>botones </strong>puede cambiarse de variable). <strong>Los mapas son interactivos</strong>;
+          se recomienda explorarlos, que es lo divertido. 
+          El primer mapa presenta el <strong>precio promedio por m2</strong> en cada barrio. El segundo resume los <strong>tipos de propiedades</strong> (departamento, PH, casa) ofrecidas 
+          (como porcentaje del total). El tercero contiene los valores promedio para la <strong>superficie</strong> de las propiedades ofrecidas en cada barrio.
+          <strong>Arriba a la derecha</strong>
+           se resume la información numérica, mientras que <strong>haciendo click en cada barrio</strong> puede un gráfico correspondiente a dicha variable 
+           (histograma de frecuencias para precio por m2 y superficie, gráfico de torta para tipo de propiedad). 
+        </p>
+
+        <p>Algunas observaciones: el mapa presenta la conocida distribución de precios de propiedades en la Ciudad de Buenos Aires, con su notoria
+           división entre el corredor Norte y corredor Sur. Esta estructura de los datos sugiere la posibilidad de crear un feature adicional, 
+           consistente en la distancia de una propiedad a ese "centro" que sería Palermo. <a href='https://github.com/iamlucasmateo/dsHousingAnalysis/blob/master/Notebooks/Mercado%20Inmobiliario%20-%20Data%20Preprocessing%20%26%20Exploration.ipynb'>
+            En el notebook</a> se desarrolla esta intuición estadísticamente. Otra cuestión interesante que puede observarse al clickear en las 
+            distribuciones de cada barrio es que, como se observó para todo el dataset en el notebook, la distribución de la superficie en cada barrio
+            es en general asimétrica a la derecha, debido a la presencia de algunos "outliers" de superficie entre los datos. 
+        </p>
+
+        <p>Algunos links de interés: con el mismo dataset se generaron <a href="heatmapPrice.html" target="blank">estos heatmaps</a>, y se desarrolló este 
+          <a href="subteEstudio.html" target="blank">estudio de caso.</a> Por aquí se vuelve al <a href="../index.html">menú principal.</a>
+
+        </p>
+
+      </section>
+
+    </div>
+
     
+  
+  </div>  
   <script type="text/javascript" src="choroplethVariosData.js"></script>
   <script src="choroplethVarios.js"></script>
 </body>

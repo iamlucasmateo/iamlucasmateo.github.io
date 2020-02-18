@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kNN algorithm visualization</title>
+    <link rel="stylesheet" href="knnVisualization.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class='main-div'>
+
+        <div class='title-div'>
+            <h1>kNN Algorithm Visualization</h1>
+        </div>
+
+        <div class='paragraph'>
+            <p>This page shows interactive visualizations of a <strong>brute force kNN classification algorithm</strong> for a chosen set of parameters. The algorithm is 
+                developed <strong>(in Python)</strong> in <a href="https://github.com/iamlucasmateo/dsMathAlgorithm" target='blank'>this notebook.</a> The aim is to show how
+                the algorithm works, and the way the hyperparameters and dataset structure affect its performance.  
+            </p>
+            <p>The visualizations show the control flow of the algorithm for one sample: it calculates the distances, updates the neighbors' list,
+                and makes a prediction. The dataset is a subset of iris, as detailed in the notebook. Feel free to play with the options. 
+                A detailed explanation of the algorithm is below.</p>
+        </div>
+
+        <div class='title-div'>
+            <h2>Algorithm Visualization</h2>
+
+        </div>
+
+        <div class='central-div'>
+            <div class='video-container'>
+                <div class='video-div'>
+                    <video controls width="500">\
+                        <source src="AlgoAnimations/even_balanced_euclidean_10.mp4" type="video/mp4">\
+                        Sorry, your browser doesn\'t support embedded videos.\
+                    </video>
+                    
+                </div>
+            </div>
+
+            <div class='separation-div'></div>
+
+            <div class='buttons-div'>
+
+                <div class='button-family weights'>
+                    <h3>Weights</h3>
+                    <div class="radiobtn">
+                        <input type="radio" id="even" name="weights" value="even" checked>
+                        <label for="even">Even</label>
+                    </div>
+                    <div class="radiobtn">
+                        <input type="radio" id="proportional" name="weights" value="proportional">
+                        <label for="proportional">Proportional</label>
+                    </div>
+                </div>
+
+                <div class='button-family dataset'>
+                    <h3>Dataset</h3>
+                    <div class="radiobtn">
+                        <input type="radio" id="balanced" name="dataset" value="balanced" checked>
+                        <label for="balanced">Balanced</label>
+                    </div>
+                    <div class="radiobtn">
+                        <input type="radio" id="unbalanced" name="dataset" value="unbalanced">
+                        <label for="unbalanced">Unbalanced</label>
+                    </div>
+                </div>
+               
+                <div class='button-family distance'>
+                    <h3>Metric</h3>
+                    <div class="radiobtn">
+                        <input type="radio" id="euclidean" name="distance" value="euclidean" checked>
+                        <label for="euclidean">Euclidean</label>
+                    </div>
+                    <div class="radiobtn">
+                        <input type="radio" id="manhattan" name="distance" value="manhattan">
+                        <label for="manhattan">Manhattan</label>
+                    </div>
+                </div>
+
+                <div class='button-family kNeighbors'>
+                    <h3>Neighbors</h3>
+                    <div class="radiobtn">
+                        <input type="radio" id="5" name="kNeighbors" value="5">
+                        <label for="5">5</label>
+                    </div>
+                    <div class="radiobtn">
+                        <input type="radio" id="10" name="kNeighbors" value="10" checked>
+                        <label for="10">10</label>
+                    </div>
+                    <div class="radiobtn">
+                        <input type="radio" id="15" name="kNeighbors" value="15">
+                        <label for="15">15</label>
+                    </div>
+                </div>
+
+                <div class='go'>
+                    <button class='go-button'>Go!</button>
+                </div>
+
+            </div>
+
+        </div>
+        
+
+        <div class='paragraph'>
+            <p>kNN is a lazy machine learning model: it defers its calculation to the prediction phase. The training phase consists only in 
+                keeping a copy of the training data. In the prediction phase, the algorithm takes each sample's features and loops through the 
+                training set, calculating the distance from each point to the sample, in accordance to a given metric 
+                (e.g., euclidean and manhattan metrics in these visualizations). As it calculates the distances, the algorithm creates a list of the 
+                <strong>k minimum distances</strong> (and a list of the corresponding data points). If a data point's distance to the sample is <strong>lower than the largest one in 
+                the list</strong>, then the largest one is discarded and the new data point takes its place.
+            </p>
+
+            <p> After the set of k neighbors is chosen, looping through the whole training set, the prediction is made. Note that this looping
+                through the whole training set is what makes this algorithm computationally expensive. The running time will be a function of the multiplication
+                between the number of features and the number of samples. The prediction can be done either by a simple majority vote, or by a weighted vote
+                (where each neighbors' vote in inversely proportional to its distance).
+            </p>
+            <p>These visualizations were built using<strong>Matplotlib animation</strong>, with the help of the <strong>Camera</strong> plugin.</p>
+
+        </div>
+
+
+
+    </div>
+    <script src='knnVisualization.js'></script>
+</body>
+</html>

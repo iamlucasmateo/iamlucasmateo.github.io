@@ -5,6 +5,13 @@ body {
     font-family: 'Merriweather', serif;
 }
 
+.main-div {
+    padding: 2% 5%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
@@ -14,11 +21,17 @@ h1 {
     font-size:2em;
 }
 
-.main-div {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2% 12%;
+.paragraph {
+    padding:2% 5%;
+    line-height: 160%;
+    font-size:17px;
+    font-family: 'Merriweather', serif;
+    text-align: justify;
+}
+
+.paragraph p h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
 
 /* Pendiente:hacerlo responsive */
@@ -35,7 +48,6 @@ h1 {
     margin:0;
     border: 1px solid black;
 }
-
 
 /* styling info */
 .info {
@@ -69,20 +81,4 @@ h1 {
     background: #e93434;
     color: #ffffff;
     max-width: 800,
-}
-
-.map-div {
-    display:flex;
-    justify-content: center;
-    width:auto;
-    height:80vh;
-    margin:0;
-}
-
-.map-div2 {
-    display:flex;
-    justify-content: center;
-    width:auto;
-    height:80vh;
-    margin:10%;
 }

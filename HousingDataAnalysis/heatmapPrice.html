@@ -11,16 +11,36 @@
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
     integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
     crossorigin=""></script>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="heatmapPrice.css"/>
 
 </head>
 <body>
-    <h1>Price Heatmap</h1>
+  <div class='main-div'>
+    <h1>Mercado Inmobiliario de Buenos Aires</h1>
+    <h2>Heatmap del precio por M2</h2>
+
+    <div class='paragraph'>
+      <p>Acérquese al mapa para que cobre vida. Cada círculo representa una data point (una propiedad). Haga click en cualquiera para ver su 
+        información detallada. El radio del círculo es proporcional al tamaño de la propiedad; su color indica su precio por m2 de acuerdo con la 
+        escala de la leyenda. Puede hacer zoom a discreción. Información sobre el mapa debajo del mismo.</p>
+    </div>
     
     <div class='map-div'> 
       <p><div id="map"></div></p>
     </div>
 
+    <div class="paragraph">
+      <section>
+        <p>Este heatmap es la presentación interactiva del dataset con el que se trabajó en 
+          <a href='https://github.com/iamlucasmateo/dsHousingAnalysis/blob/master/Notebooks/Mercado%20Inmobiliario%20-%20Data%20Preprocessing%20%26%20Exploration.ipynb'>
+          este notebook,</a> luego de que los datos fueran filtrados y limpiados de errores. Una presentación de esta información, agrupada por barrio,
+          puede encontrarse en <a href="choroplethVarios.html">estos mapas.</a>
+        </p>
+      </section>
+    </div>
+  
+  </div>
   <script src="BAData.js"></script>  
   <script src="heatmapPriceDataPoints.js"></script>
   <script src="choroplethVariosData.js"></script>

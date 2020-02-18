@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Choropleth Subte</title>
+    <title>Estudio de caso: mercado inmobiliario</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
     crossorigin=""/>
@@ -19,26 +19,59 @@
 <body>
   <div class='main-div'>
     <h1>Estudio de caso: cuánto vale vivir cerca del subte?</h1>
-    <h2>Un puzzle estadístico</h2>
+    <h2>Vislumbrando la complejidad de un dataset</h2>
 
     <section class='choropleth-text'>
-      <p><a href="">Notebooks en Github</a></p>
-      <p><a href="choroplethVarios.html">Choropleth</a></p>
-      <p><a href="heatmapPrice.html">Heatmap</a></p>
-      <p class='choropleth-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit accusantium unde incidunt non aperiam ea, vitae, possimus at saepe aliquid commodi quidem voluptate quisquam praesentium fugit, maxime quos quaerat ducimus assumenda nobis consequatur voluptas voluptates quam velit! Totam, rem dolor eaque culpa cupiditate facere ab eius placeat laboriosam at. Tenetur neque nam sit assumenda. Delectus saepe fuga error nemo laudantium perferendis temporibus sint. Error quibusdam placeat iure quis doloribus quam, numquam nostrum ratione in deleniti reiciendis dolores saepe accusamus. Dolores dolor nobis rem, expedita sapiente a eum necessitatibus dignissimos pariatur veniam recusandae eligendi neque nulla laboriosam ad laborum! Praesentium, quod?</p>
+      <div class='paragraph'>
+        <p>El presente mapa choropleth indica las correlaciones entre la cercanía de una propiedad al subte y su precio por m2, agrupadas por barrio, 
+          de acuerdo con el análisis que puede verse en <a href="https://github.com/iamlucasmateo/dsHousingAnalysis/blob/master/Notebooks/Estudio%20de%20Caso%20-%20Subte.ipynb">
+            este notebook.</a> Los datos del precio por m2 corresponden a la Ciudad de Buenos Aires y han sido provistos por <a href='https://www.properati.com.ar'>Properati</a>,
+            y originalmente procesados en <a href="https://github.com/iamlucasmateo/dsHousingAnalysis/blob/master/Notebooks/Mercado%20Inmobiliario%20-%20Data%20Preprocessing%20%26%20Exploration.ipynb">
+            este notebook.</a>. Los colores rojizos indican en un barrio indican que <strong>las propiedades más caras son las más alejadas del subte</strong>, 
+          mientras que los azules indican lo contrario. La intensidad del color es proporcional al valor de la correlación. Las correlaciones no significativas (5%)
+          están indicadas en los barrios de color blanco. Haciendo click en cada barrio puede verse un <strong>scatterplot con la recta de regresión correspondiente.</strong>
+            El mapa es interactivo, se invita al lector a explorarlo. Debajo del mismo se detalla el proceso de construcción del dataset.
+        </p>
+      </div>
+      
     </section>
-    <h2>Choropleth</h2>
-    <p class='choropleth-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit accusantium unde incidunt non aperiam ea, vitae, possimus at saepe aliquid commodi quidem voluptate quisquam praesentium fugit, maxime quos quaerat ducimus assumenda nobis consequatur voluptas voluptates quam velit! Totam, rem dolor eaque culpa cupiditate facere ab eius placeat laboriosam at. Tenetur neque nam sit assumenda. Delectus saepe fuga error nemo laudantium perferendis temporibus sint. Error quibusdam placeat iure quis doloribus quam, numquam nostrum ratione in deleniti reiciendis dolores saepe accusamus. Dolores dolor nobis rem, expedita sapiente a eum necessitatibus dignissimos pariatur veniam recusandae eligendi neque nulla laboriosam ad laborum! Praesentium, quod?</p>
+    
     <div class="map-div">
       <div id="map"></div>
     </div>
-    <br><br><br>
-    <h2>Detalle</h2>
-    <p class='zoome-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia vel consequatur voluptatum eligendi aut quae inventore voluptates deserunt aperiam velit quasi accusamus delectus doloremque veniam esse rerum recusandae at, magni eum? Nulla tenetur saepe inventore maxime quidem. Aliquid dolorum est iure, odit ad nesciunt, corporis placeat libero cum quae, sequi laboriosam! Quam voluptatibus animi iusto quia ipsa quisquam mollitia pariatur suscipit minus aperiam, dolores porro eius perspiciatis, saepe cupiditate sunt odit ducimus. Suscipit beatae, expedita similique magnam, aperiam tempora ea et iste sint laboriosam molestias repellat nulla repellendus ut nemo quas incidunt ipsam commodi doloremque corrupti! Amet delectus reiciendis doloremque?	</p>
+
+    <div class='paragraph'>
+      <section>
+        <p><h2>Construcción del dataset</h2></p>
+        <p>Luego de limpiados los datos, se cruzó la base de datos resultantes con la información provista por <a href='https://data.buenosaires.gob.ar/' target='blank'>BA Data</a>,
+          que indica la localización geográfica de <strong>cada boca de subte</strong> existente en la Ciudad. Con dicha información, se desarrolló un algoritmo de búsqueda de mínimo,
+          utilizando la ubicación de cada propiedad y hallando <b>la boca de subte más cercana</b>. Este dato se añadió al dataset original, en la forma
+          de dos nuevos features: mínima distancia a una boca de subte (en metros) y boca de subte más cercana (para posterior control en Google Maps).
+          Posteriormente se analizó la <strong>correlación de Pearson</strong> entre las variables precio por m2 y mínima distancia a una boca de subte, obteniéndose un valor de -0.19, 
+          indudablemente significativo (<strong>p-value</strong> cero a todos los efectos prácticos). Este signo es el esperado: a mayor distancia, menor precio por m2. (El código de todo este trabajo pude verse en 
+          <a href="https://github.com/iamlucasmateo/dsHousingAnalysis/blob/master/Notebooks/Estudio%20de%20Caso%20-%20Subte.ipynb">este notebook).</a>
+        </p>
+          Posteriormente se realizó el mismo trabajo agrupando los datos por barrio, y lo que se encuentra es más complejo: hay barrios sin correlación 
+          significativa, y entre los barrios con correlación significativa, hay muchos que tienen <strong>correlación positiva (i.e., exactamente lo contrario a lo esperado). </strong> 
+          Lo curioso es que, entre los tres grupos, hay tanto barrios que están completamente atravesados por el subte como barrios que no tienen ninguna estación de subte.
+          La razón para este complicado comportamiento puede vislumbrarse en el siguiente mapa interactivo, que pone zoom en una zona interesante por su diversidad.
+          Queda la pregunta planteada para el lector, pero aquí hay una pista. 
+        </p>
+      </section>
+    </div>
+    
+    <div class='paragraph'>
+      <p><h2>Zoom: línea B</h2></p>
+      <p>Los valores de precio por m2 están en escala de grises, de acuerdo con su intensidad. Haga click en cada propiedad para conocer su precio por m2.</p>
+    </div> 
+    
     <div class="map-div2">
       <div id="map2"></div>
     </div>
   </div>
+
+  <p><a href="choroplethVarios.html">Mapas choropleth con resumen de los datos</a></p>
+      <p><a href="heatmapPrice.html">Heatmap del precio por m2</a></p>
 
 <script type="text/javascript" src="subteBarrios.js"></script>
 <script type="text/javascript" src="subteLineaB.js"></script>
