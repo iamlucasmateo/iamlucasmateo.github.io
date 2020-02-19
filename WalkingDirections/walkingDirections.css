@@ -42,3 +42,12 @@ h2 {
     font-family: 'Merriweather', serif;
     text-align: justify;
 }
+
+#map {
+    width: 700px;
+    height: 570px;
+    border:1px solid #4C2347;
+    transition: all 500ms ease;
+    filter:grayscale(30%);
+    
+}

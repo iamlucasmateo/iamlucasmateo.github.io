@@ -6,17 +6,38 @@
     <title>Walking Directions App</title>'
     <link rel="stylesheet" href="walkingDirections.css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
 </head>
 <body>
     <div class='main-div'>
-        <h1>En construccion</h1>
+        <div class='title-div'>
+            <h1>Walking Directions App</h1>
+            <h2>First iteration</h2>
+        </div>
 
         <div class='paragraph'>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, veritatis placeat? Dolore possimus quis cumque quod deleniti consequuntur fugiat molestias nobis ducimus quas, non saepe eaque enim modi praesentium doloribus. Maxime nobis eum facilis architecto commodi cum assumenda iste harum, necessitatibus laboriosam quis doloribus aliquid exercitationem pariatur enim dolores molestias.</p>
+            <p>This project aims at building a walking directions app for the city of Buenos Aires, aimed at tourists and leisure users. 
+                The design specification is as follows: the users will provide a list of interests freely written (or spoken), a time interval
+                and (optionally) a point to which they want to arrive in the end. The app will suggest walking trips for the users based on their
+                interests, their available time and the final destination. </p>
+            <p>Currently, the plan is to use the following technologies: <strong>Leaflet</strong> for the mapping, <strong>Leaflet Routing Machine</strong>
+                for the routing, <strong>Natural Language Processing</strong> for the users' interests analysis, <strong>speech processing</strong>
+                for the users' interests recognition if spoken. This last feature could be implemented using the 
+                black-box models provided by AWS.  
+            </p>
+            <p>This first (very basic) iteration presents a map, asks for two pairs of coordinates form
+
+            </p>
 
         </div>
+
+        <div id='map'></div>
     
 
     </div>
+    <script src='walkingDirections.js'></script>
 </body>
 </html>

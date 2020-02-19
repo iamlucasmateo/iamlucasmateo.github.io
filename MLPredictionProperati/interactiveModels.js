@@ -211,7 +211,7 @@ function infoUpdate() {
                 }).addTo(map);
               }
         });
-        markerList[i].on('mouseout', function(e) {
+        markerList[i].on('mouseout',function(e) {
             info.update();
             for(let j = 0;j<model['neigh_lat_list'][0].length;j++){
                 neighborsList[j].remove(map)
