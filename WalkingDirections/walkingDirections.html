@@ -24,14 +24,26 @@
                 and (optionally) a point to which they want to arrive in the end. The app will suggest walking trips for the users based on their
                 interests, their available time and the final destination. </p>
             <p>Currently, the plan is to use the following technologies: <strong>Leaflet</strong> for the mapping, <strong>Leaflet Routing Machine</strong>
-                for the routing, <strong>Natural Language Processing</strong> for the users' interests analysis, <strong>speech processing</strong>
+                and <strong>Mapbox</strong>for the routing, <strong>Natural Language Processing</strong> for the users' interests analysis, <strong>speech processing</strong>
                 for the users' interests recognition if spoken. This last feature could be implemented using the 
                 black-box models provided by AWS.  
             </p>
-            <p>This first (very basic) iteration presents a map, asks for two pairs of coordinates form
-
+            <p>This first (very basic) iteration presents a map, asks for two pairs of coordinates from the user and shows a corresponding path.
             </p>
+        </div>
 
+        <div class='input-div'>
+                <div class="form">
+                  <label for="pointA">Point A coordinates: </label>
+                  <input type="text" name="points" id="pointA" placeholder="lat, lon" required>
+                </div>
+                <div class="form">
+                  <label for="pointB">Point B coordinates: </label>
+                  <input type="text" name="points" id="pointB" placeholder="lat, lon" required>
+                </div>
+                <div class="form">
+                  <button id="go">Go!</button>
+                </div>           
         </div>
 
         <div id='map'></div>
