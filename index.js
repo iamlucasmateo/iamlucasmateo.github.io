@@ -72,12 +72,14 @@ projLinksObj = {
         <p><b><a href="HousingDataAnalysis/heatmapPrice.html" target="blank">Heatmap interactivo</b></a> con información detallada de todo el dataset</p>\
         <p>Un interesante <b><a href="HousingDataAnalysis/subteEstudio.html" target="blank">estudio de caso</a></b> utilizando otras bases de datos públicas</p>\
         <p><b><a href="https://github.com/iamlucasmateo/dsHousingAnalysis" target="blank">Repositorio de Notebooks</a></b> con el procesamiento y análisis de los datos.</p>',
-    'housingPredictions':'<p><b><a href="MLPredictionProperati/interactiveModels.html" target="blank">Mapa interactivo</a></b> comparando modelos de regresión para precios de propiedades residenciales.\
-        <p><b><a href="https://github.com/iamlucasmateo/dsHousingPrediction" target="blank">Repositorio de notebooks</a></b> con el desarrollo de los modelos.</p>',
+    'housingPredictions':'<p><b><a href="MLPredictionProperati/interactiveModels.html" target="blank">Mapa interactivo</a></b> comparando modelos de regresión kNN para precios de propiedades residenciales.\
+        <p><b><a href="https://github.com/iamlucasmateo/dsHousingPrediction" target="blank">Repositorio de notebooks</a></b> con el desarrollo de modelos predictivos.</p>',
     'mathAlgorithms': '<p><b><a href="Math&Algorithms/knnVisualization.html" target="blank">Interactive visualization</a></b> of a kNN algorithm.\
-    <p><b><a href="https://github.com/iamlucasmateo/dsMathAlgorithm" target="blank">Notebook repository</a></b> with from-scratch algorithms and math content.</p>',
-    'economics':'<p><b><a href="https://github.com/iamlucasmateo/dsEconomics" target="blank">Notebook repository</a></b> for this project.</p>',
-    'walkingDirections':'<p><b><a href="WalkingDirections/walkingDirections.html" target="blank">First iteration</a></b> for this web app.',
+    <p><b>Notebook  developing a <a href="https://github.com/iamlucasmateo/dsMathAlgorithm/blob/master/KNN/KNN%20algorithms.ipynb" target="blank">from-scratch kNN algorithm.</a></b></p>\
+    <p><b>Notebook developing a <a href="https://github.com/iamlucasmateo/dsMathAlgorithm/blob/master/Trees/Decision_Tree_Algorithm.ipynb" target="blank">from-scratch decision tree algorithm.</a></b></p>\
+    <p><b>MIT OCW\'s <a href="https://github.com/iamlucasmateo/dsMathAlgorithm/tree/master/MIT%20OCW%2018.065" target="blank">Linear Algebra</a></b> for Data Science.</p>',
+    'economics':'<p><b><a href="https://github.com/iamlucasmateo/dsEconomics" target="blank">microeconomic model</a></b> featuring the ROC curve as an optimization constraint.</p>',
+    'walkingDirections':'<p><b><a href="WalkingDirections/walkingDirections.html" target="blank">First iteration</a></b> for this personalized Walking Tour app.',
     'webProjects':'<p><a href="https://codepen.io/lucasmateo/" target="blank"><b>Codepen projects</b></a> for FCC Front End certification</p>\
         <p>A simple<a href="WebDesign/ProductLanding/ProductLanding.html" target="blank"><b> Wordpress-style theme</b></a> (almost entirely HTML-CSS).',
 }

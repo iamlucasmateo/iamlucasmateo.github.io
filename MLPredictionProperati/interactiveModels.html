@@ -40,18 +40,48 @@
       </section>
     </div>
 
-    <div class='map-and'>
-        <div id="map"></div>
       <div class='model-info'>
+        <p class='haga-click'>Haga click en un modelo para visualizar</p>
         <div class="buttons-div">
-          <button class="buttons" id="00naifKNN">Naïf kNN</button>
-          <button class="buttons" id="01gridKNN">Grid kNN</button>
-        </div>
-        <div class='model-text'>
-          <p class='pModelo'>Haga click en un modelo para visualizar</p>
+          <button class="buttons" id="00grid">Grid Search</button>
+          <button class="buttons" id="01target">Target Change</button>
+          <button class="buttons" id="02bagging">Bagging</button>
+          <button class="buttons" id="03correlation">Correlation</button>
+          <button class="buttons" id="04adaptive">Adaptive</button>
+
         </div>
       </div>
+
+    <h2>Detalle</h2>
+
+    <div class='model-text'>
+      <p>En el mapa pueden observarse los vecinos, cuya superficie es proporcional al radio del punto y cuya intensidad de color
+         es proporcional al precio por m2. El detalle del conjunto de predictores está en el cuadro informativo del mapa. Detalles de cada
+        modelo, <a href="https://github.com/iamlucasmateo/dsHousingPrediction/blob/master/Notebooks/Mercado%20Inmobiliario%20-%20kNN%20Models.ipynb">
+          en este notebook.</a>  </p>
+      <p class='pModelo'></p>
     </div>
+
+    <h2>Mapa de Vecinos</h2>
+
+    <div class='map-div'>
+      <div id="map"></div>
+    </div>
+
+    <h2>Histograma Errores</h2>
+
+    <div class='histograma figures'>
+      
+    </div>
+
+    <h2>Mapa Errores</h2>
+
+    <div class='error-map figures'>
+    
+    </div>
+
+    
+  
 
   </div>
 

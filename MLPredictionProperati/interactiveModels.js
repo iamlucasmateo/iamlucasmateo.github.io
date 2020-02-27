@@ -3,6 +3,8 @@ var map = L.map('map').setView([-34.610824, -58.435552], 12); -34.584993, -58.46
 var buttons = document.querySelectorAll(".buttons");
 var pModelo =  document.querySelector('.pModelo')
 var state = -1
+var hist = document.querySelector('.histograma')
+var errorMap = document.querySelector('.error-map')
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=' + mapboxAccessToken, {
     id: 'mapbox/light-v9',
@@ -144,9 +146,9 @@ legend.addTo(map);
 
 // Lista de modelos, calleamos a cada uno con la variable state
 var model;
-var modelList = [naifKNN,optimizedKNN]
+var modelList = [grid,target,bagging,correlation,adaptive]
 
-var listaPrueba = ['loca1','loca2','loca3','loca4','loca5','loca6','loca7','loca8','loca9','loca10','loca11',]
+
 
 function showSample(buttonId) {
     // var buttonIndex = Number(buttonId.slice(0,2));
@@ -186,37 +188,41 @@ var myIcon = L.divIcon({color: 'black'});
 // This function will show the details for each sample
 // i will stand for the sample, j for its neighbors
 function infoUpdate() {
-    for (let i = 0; i < sampleList['lat'].length; i += 1) {
-        var neighborsList = [];
-        markerList[i].on('mouseover', function(e) {
-            // update Info
-            var priceTest = sampleList['price'][i];
-            var price_m2Test = sampleList['price_m2'][i];
-            var surfaceTest = sampleList['surface'][i];
-            var surfacePred = model['neigh_mean_surf'][i];
-            var price_m2Pred = model['neigh_mean_price_m2'][i];
-            var pricePred = model['pred_price'][i];
-            info.update(pricePred,priceTest,price_m2Pred,price_m2Test,surfacePred,surfaceTest);
-            // highlight neighbors,self
-            for(let j = 0;j<model['neigh_lat_list'][0].length;j++){
-                neighborsList[j] = L.circleMarker([model['neigh_lat_list'][i][j],model['neigh_lon_list'][i][j]], {
-                    renderer: myRenderer,
-                    radius:convert(model['neigh_surf_list'][i][j],surfaceList,radiusListNeighbors),
-                    fillOpacity:1,
-                    fillColor:convert(model['neigh_price_m2_list'][i][j],priceList,colorList),
-                    stroke:true,
-                    fillRule:'nonzero',
-                    color:'black',
-                    weight:0.4,
-                }).addTo(map);
-              }
-        });
-        markerList[i].on('mouseout',function(e) {
-            info.update();
-            for(let j = 0;j<model['neigh_lat_list'][0].length;j++){
-                neighborsList[j].remove(map)
-            }
-        });
+    if (model == bagging) {
+        return
+    } else {
+        for (let i = 0; i < sampleList['lat'].length; i += 1) {
+            var neighborsList = [];
+            markerList[i].on('mouseover', function(e) {
+                // update Info
+                var priceTest = sampleList['price'][i];
+                var price_m2Test = sampleList['price_m2'][i];
+                var surfaceTest = sampleList['surface'][i];
+                var surfacePred = model['neigh_mean_surf'][i];
+                var price_m2Pred = model['neigh_mean_price_m2'][i];
+                var pricePred = model['pred_price'][i];
+                info.update(pricePred,priceTest,price_m2Pred,price_m2Test,surfacePred,surfaceTest);
+                // highlight neighbors,self
+                for(let j = 0;j<model['neigh_lat_list'][0].length;j++){
+                    neighborsList[j] = L.circleMarker([model['neigh_lat_list'][i][j],model['neigh_lon_list'][i][j]], {
+                        renderer: myRenderer,
+                        radius:convert(model['neigh_surf_list'][i][j],surfaceList,radiusListNeighbors),
+                        fillOpacity:1,
+                        fillColor:convert(model['neigh_price_m2_list'][i][j],priceList,colorList),
+                        stroke:true,
+                        fillRule:'nonzero',
+                        color:'black',
+                        weight:0.4,
+                    }).addTo(map);
+                }
+            });
+            markerList[i].on('mouseout',function(e) {
+                info.update();
+                for(let j = 0;j<model['neigh_lat_list'][0].length;j++){
+                    neighborsList[j].remove(map)
+                }
+            });
+        };
     };
 };
 
@@ -232,31 +238,34 @@ document.addEventListener("click",function(e){
         model = modelList[state];
         updateText(buttonId);
         showSample(buttonId);
+        showHistogram(buttonId);
+        showErrorMap(buttonId);
         infoUpdate();
-        // clearMap();
-        // state = stateList[event.target.id];
-        // shownLegend = legendList[event.target.id];
-        // shownLegend.addTo(map);
-        // info.addTo(map);
-        // mapBase = L.geoJson(barrios, {style: styleList[event.target.id]});
-        // mapBase.addTo(map);
-        // geojson = L.geoJson(barrios, {
-        // style: styleList[event.target.id],
-        // onEachFeature: onEachFeature
-    // }).addTo(map);
-
     }
 });
 
 var textModelo = {
-    '00naifKNN': 'Este es un modelo de regresión de k vecinos, ajustado según el default de sci-kit learn. \
-    Es decir, 5 vecinos y pesos no proporcionales. En el mapa pueden observarse los vecinos, cuya superficie es proporcional al radio del punto\
-    y cuya intensidad de color es proporcional al precio por m2. El detalle del conjunto de predictores está en el cuadro informativo del mapa.',
-    '01gridKNN':'Modelo kNN optimizado a través de Grid Search, resultando en un k óptimo de 14 <a href="#">(link al notebook aquí)</a>. \
-    Los vecinos que se muestran en el mapa tienen las mismas características que el modelo kNN básico.'
+    '00grid':'<b>Grid Search</b>: Modelo kNN optimizado a través de Grid Search, resultando en un k óptimo de 13.',
+    '01target':'<b>Target Change</b>: Modelo que predice otra variable (precio por m2) para luego predecir el precio de la propiedad. \
+                También fue optimizado vía Grid Search con CV, con un k = 24.',
+    '02bagging':'<b>Bagging</b>: Bagging de modelos kNN, sugerido por el overfitting del modelo original. Este modelo, al ser un ensamble, \
+        no tiene "vecinos".',
+    '03correlation':'<b>Correlation</b>: Modelo kNN con distancia euclideana ponderada, utilizando como ponderaciones \
+        el valor absoluto de las correlaciones de cada feature con el target.',
+    '04adaptive':'<b>Adaptive</b>: Modelo que parte de ponderaciones para la distancia euclideana (según feature importance de Random Forest) \
+        y mejora la performance mediante un algoritmo evolutivo.'
 }
 
 function updateText(buttonId) {
     pModelo.innerHTML = textModelo[buttonId]
 }
+
+function showHistogram(buttonId) {
+    hist.innerHTML = '<img src="Imgs/hist_err_'+buttonId.slice(2,buttonId.length)+'.png" height=400>'
+}
+
+function showErrorMap(buttonId) {
+    errorMap.innerHTML = '<img src="Imgs/map_err_'+buttonId.slice(2,buttonId.length)+'.png" height=700>'
+}
+
 

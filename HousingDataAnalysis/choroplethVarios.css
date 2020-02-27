@@ -75,14 +75,6 @@ h2 {
     width: 700px;
     height: 570px;
     border:1px solid #4C2347;
-    transition: all 500ms ease;
-    filter:grayscale(30%);
-    
-}
-
-#map:hover {
-    box-shadow:-10px 10px 30px #4C2347;
-    filter:none;
 }
 
 /* styling info */

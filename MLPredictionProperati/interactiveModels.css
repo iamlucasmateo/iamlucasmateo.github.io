@@ -25,12 +25,15 @@ h1 {
     font-size: 50px;
     color:#4C2347;
     margin:10px 3px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 35px;
     color:#72356A;
     margin:10px 3px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .paragraph {
@@ -40,47 +43,52 @@ h2 {
     font-family: 'Merriweather', serif;
 }
 
-.map-and {
+.map-div {
     display:flex;
-    padding:0;
-    border:0;
-    margin:2% 5%;
-    border: 1px solid #4C2347;
     justify-content: center;
-    height:550px;
+
 }
 #map {
-    width: 100%;
-    height: 100%;
-    margin:0;
-    border: 1px solid #4C2347;
-    flex-basis:70%
+    width: 700px;
+    height: 550px;
+    border:1px solid #4C2347;
+}
+.haga-click {
+    text-align: center;
+    margin:2px;
 }
 
 .model-info {
+    position: sticky;
+    top: 0;
     color:#2B3D41;
-    width:50%;
+    width:100%;
+    margin:5px;
     /* height:100%; */
-    background-color: rgba(230,242,242,0.5);
+    background-color: rgba(255,219,250,1);
     border: 1px solid #4C2347;
     padding:5px;
     display:flex;
     flex-direction: column;
+    z-index: 5000;
+}
+.model-text {
+    margin:5px;
 }
 
 .buttons-div {
     display:flex;
     justify-content:space-evenly;
-    padding:1%;
+    padding:1px;
 }
 
 .buttons {
     font-family: 'Montserrat', sans-serif;
-    font-size:1em;
+    font-size:0.9em;
     color:#F9CAF9;
     background-color: #4C2347;
     border:1px solid #F9CAF9;
-    padding:10px;
+    padding:5px;
     font-weight: bold;
 }
 
@@ -92,9 +100,10 @@ button[disabled]{
 }
 
 .pModelo {
+    height:32px;
     padding:0.5em;
     font-size:14px;
-    margin:0;
+    margin:5px;
 }
 
 
@@ -135,17 +144,9 @@ button[disabled]{
     display:flex;
     justify-content: center;
     width:auto;
-    height:80vh;
-    margin:0;
+    margin:1px;
 }
 
-.map-div2 {
-    display:flex;
-    justify-content: center;
-    width:auto;
-    height:80vh;
-    margin:10%;
-}
 
 .info-table {
     border-collapse:collapse;
@@ -153,4 +154,9 @@ button[disabled]{
 
 .info-table td {
     padding:4px;
+}
+
+.figures {
+    display:flex;
+    justify-content: center;
 }
