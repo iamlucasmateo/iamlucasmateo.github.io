@@ -72,9 +72,10 @@ projLinksObj = {
         <p><b><a href="HousingDataAnalysis/heatmapPrice.html" target="blank">Heatmap interactivo</b></a> con información detallada de todo el dataset</p>\
         <p>Un interesante <b><a href="HousingDataAnalysis/subteEstudio.html" target="blank">estudio de caso</a></b> utilizando otras bases de datos públicas</p>\
         <p><b><a href="https://github.com/iamlucasmateo/dsHousingAnalysis" target="blank">Repositorio de Notebooks</a></b> con el procesamiento y análisis de los datos.</p>',
-    'housingPredictions':'<p><b><a href="MLPredictionProperati/interactiveModels.html" target="blank">Mapa interactivo</a></b> comparando modelos de regresión kNN para precios de propiedades residenciales.\
+    'housingPredictions':'<p><b><a href="MLPredictionProperati/interactiveModels.html" target="blank">Mapa interactivo</a></b> comparando modelos de regresión kNN.\
         <p>Notebook: <b><a href="https://github.com/iamlucasmateo/dsHousingPrediction/blob/master/Notebooks/Mercado%20Inmobiliario%20-%20kNN%20Models.ipynb" target="blank">modelos tipo kNN</a></b>.</p> \
-        <p>Notebook: <b><a href="https://github.com/iamlucasmateo/dsHousingPrediction/blob/master/Notebooks/Mercado%20Inmobiliario%20-%20Decision%20Tree%20Models.ipynb" target="blank">modelos con decision trees</a></b>.</p>',
+        <p>Notebook: <b><a href="https://github.com/iamlucasmateo/dsHousingPrediction/blob/master/Notebooks/Mercado%20Inmobiliario%20-%20Decision%20Tree%20Models.ipynb" target="blank">modelos con decision trees</a></b>.</p>\
+        <p>Notebook: <b><a href="https://github.com/iamlucasmateo/dsHousingPrediction/blob/master/Notebooks/Error%20Analysis%20-%20WIP.ipynb" target="blank">modelos de ensamble</a></b>.</p>',
     'mathAlgorithms': '<p><b><a href="Math&Algorithms/knnVisualization.html" target="blank">Interactive visualization</a></b> of a kNN algorithm.\
     <p>Notebook  developing a <b><a href="https://github.com/iamlucasmateo/dsMathAlgorithm/blob/master/KNN/KNN%20algorithms.ipynb" target="blank">from-scratch kNN algorithm.</a></b></p>\
     <p>Notebook developing a <b><a href="https://github.com/iamlucasmateo/dsMathAlgorithm/blob/master/Trees/Decision_Tree_Algorithm.ipynb" target="blank">from-scratch decision tree algorithm.</a></b></p>\
