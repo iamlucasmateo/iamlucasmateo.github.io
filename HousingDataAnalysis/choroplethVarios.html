@@ -24,7 +24,12 @@
     </div>
 
     <div class='paragraph' id='ver-detalle'>
-      <p>Haga click en cada barrio para ver detalle. Información debajo del mapa.</p>
+      <p>Esta página es un presentación interactiva de información extraída de la base de datos de <a href='https://www.properati.com.ar'>Properati</a>.
+        La historia que pasa de los datos crudos a estos mapas interactivos se cuenta en <a href='https://github.com/iamlucasmateo/dsHousingAnalysis/blob/master/Notebooks/Mercado%20Inmobiliario%20-%20Data%20Preprocessing%20%26%20Exploration.ipynb'> este Jupyter notebook.</a>
+        Haga click en cada barrio para ver detalle. 
+        Algunos links de interés: con el mismo dataset se generaron <a href="heatmapPrice.html" target="blank">estos heatmaps</a>, y se desarrolló este interesante
+          <a href="subteEstudio.html" target="blank">estudio de caso.</a> Por aquí se vuelve al <a href="../index.html">menú principal.</a>
+        Más información debajo del mapa.</p>
     </div>
 
     <div class="buttons-div">
@@ -37,10 +42,8 @@
 
     <div class="paragraph">
       <section>
-        <p>En esta página se presenta un dataset con información sobre propiedades residenciales en venta en la Ciudad de Buenos Aires. Los datos originales fueron extraídos 
-          de <a href='https://www.properati.com.ar'>Properati</a>. El procesamiento de la información se llevó a cabo en 
-          <a href='https://github.com/iamlucasmateo/dsHousingAnalysis/blob/master/Notebooks/Mercado%20Inmobiliario%20-%20Data%20Preprocessing%20%26%20Exploration.ipynb'>
-          este Jupyter notebook,</a> utilizando <strong>Python</strong> como lenguaje y las librerías <strong>numpy, pandas, geopandas, seaborn, Matplotlib y sci-kit learn.</strong>
+        <p>Los mapas presentan un dataset con información sobre propiedades residenciales en venta en la Ciudad de Buenos Aires. El procesamiento de la información se llevó a cabo 
+          utilizando <strong>Python</strong> como lenguaje y las librerías <strong>numpy, pandas, geopandas, seaborn, Matplotlib y sci-kit learn.</strong>
           Dicho procesamiento implicó, entre otras cosas, el filtrado de datos ubicados en la Ciudad de Buenos Aires, de datos faltantes (<b>NaNs</b>),
           y de datos imputados erróneamente, balanceando el tamaño del dataset con la utilidad de la información. </p> 
           
@@ -66,11 +69,6 @@
             En el notebook</a> se desarrolla esta intuición estadísticamente. Otra cuestión interesante que puede observarse al clickear en las 
             distribuciones de cada barrio es que, como se observó para todo el dataset en el notebook, la distribución de la superficie en cada barrio
             es en general asimétrica a la derecha, debido a la presencia de algunos "outliers" de superficie entre los datos. 
-        </p>
-
-        <p>Algunos links de interés: con el mismo dataset se generaron <a href="heatmapPrice.html" target="blank">estos heatmaps</a>, y se desarrolló este 
-          <a href="subteEstudio.html" target="blank">estudio de caso.</a> Por aquí se vuelve al <a href="../index.html">menú principal.</a>
-
         </p>
 
       </section>

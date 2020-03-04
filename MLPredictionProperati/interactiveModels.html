@@ -25,16 +25,18 @@
 
     <div class='paragraph'>
       <section>
-        <p>En esta página se presenta un visualización interactiva de los modelos de Machine Learning desarrollados en <a href="#">este repositorio de Notebooks</a>. 
+        <p>En esta página se presenta un visualización interactiva de los modelos kNN desarrollados en <a href="https://github.com/iamlucasmateo/dsHousingPrediction/blob/master/Notebooks/Mercado%20Inmobiliario%20-%20kNN%20Models.ipynb" target="blank">este Jupyter notebook</a>. 
         El objetivo de los modelos es realizar predicciones sobre los precios de las propiedades en la Ciudad de Buenos Aires, en base a la información histórica proveída por <a href="https://www.properati.com.ar/data/" target='blank'>Properati</a>.
         Es decir, se trata de modelos de regresión donde el target es el precio y los features, una serie de datos que se tiene de la propiedad. 
-        En otro Notebook se llevo a cabo previamente el <a href="#">procesamiento de los datos</a> para poder trabajar con estos modelos de Machine Learning.
+        En otro Notebook se llevo a cabo previamente el <a href="https://github.com/iamlucasmateo/dsHousingAnalysis/blob/master/Notebooks/Mercado%20Inmobiliario%20-%20Data%20Preprocessing.ipynb" target='blank'>procesamiento de los datos</a> para poder trabajar con estos modelos de Machine Learning.
           </p>
         <p>
           Cada modelo presenta sus particularidades, pero hay algunos elementos en común en las visualizaciones. Se trabaja siempre con la misma muestra de test (que puede verse inmediatamente en el mapa).
-          Los tamaños de los puntos en el mapa son proporcionales al error (RMSE) correspondiente a ese elemento para el modelo en cuestión, de manera que son distintos para cada modelo.
-          En el caso de los modelos kNN, podrá observarse en el mapa el grupo de "vecinos" a partir de los cuales se hizo la inferencia. Dichos vecinos tienen un tamaño proporcional a su superficie y un una intensidad de color proporcional a su precio por m2.
+          El color de los puntos en el mapa representa el error (RMSE) correspondiente a ese elemento para el modelo en cuestión, de manera que es distinto para cada modelo.
+          Con la excepción del modelo de bagging, podrá observarse en el mapa para cada modelo, posando el mouse sobre una muestra, el grupo de "vecinos" a partir de los cuales se hizo la inferencia. 
+          Dichos vecinos tienen un tamaño proporcional a su superficie y un una intensidad de color proporcional a su precio por m2.
           A su vez, para cada modelo pueden observarse una serie de gráficos, como la distribución de los errores y scatterplots con respecto a los features. 
+          Dichos errores se analizan para el desarollo de métodos de ensamble en <a href="https://github.com/iamlucasmateo/dsHousingPrediction/blob/master/Notebooks/Error%20Analysis%20-%20WIP.ipynb" target='blank'>este notebook.</a>
         </p>
         
       </section>
@@ -55,10 +57,8 @@
     <h2>Detalle</h2>
 
     <div class='model-text'>
-      <p>En el mapa pueden observarse los vecinos, cuya superficie es proporcional al radio del punto y cuya intensidad de color
-         es proporcional al precio por m2. El detalle del conjunto de predictores está en el cuadro informativo del mapa. Detalles de cada
-        modelo, <a href="https://github.com/iamlucasmateo/dsHousingPrediction/blob/master/Notebooks/Mercado%20Inmobiliario%20-%20kNN%20Models.ipynb">
-          en este notebook.</a>  </p>
+      <p>En el mapa pueden observarse los "vecinos" (posando sobre una muestra), cuya superficie es proporcional al radio del punto y cuya intensidad de color
+         es proporcional al precio por m2. El detalle del conjunto de predictores está en el cuadro informativo del mapa.  </p>
       <p class='pModelo'></p>
     </div>
 
@@ -79,9 +79,6 @@
     <div class='error-map figures'>
     
     </div>
-
-    
-  
 
   </div>
 
