@@ -49,7 +49,7 @@ linksButton.addEventListener('click',function(){
     projLinks.innerHTML = '';
     linksButton.style.display = 'none';
     linkState = 'off';
-    hoverText.innerHTML = 'Hover on a project for info';
+    hoverText.innerHTML = '<b>(Hover</b> on a project for info)';
 });
 
 projTextObj = {
