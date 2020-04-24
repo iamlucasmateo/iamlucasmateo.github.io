@@ -73,12 +73,12 @@ projLinksObj = {
         <b><a href="https://github.com/iamlucasmateo/dsHousingAnalysis" target="blank">repositorio de notebooks.</a></b></p>\
         <p>- <b><a href="https://github.com/iamlucasmateo/odsla-desafio1/blob/master/ODSLA%20-%20EDA%20geogr%C3%A1fico%20-%20Causas%20Judiciales%20CABA.ipynb">\
         Análisis geográfico</a></b> de la distribución de causas judiciales (y propuestas de mejora).</b></p>\
-        <p>- <b><a href="https://github.com/iamlucasmateo/Tableau">Tableau workbooks</a></b> con análisis de una variedad de negocios.</p>',
+        <p>- <b><a href="https://github.com/iamlucasmateo/Tableau" target="blank">Tableau workbooks</a></b> con análisis de una variedad de negocios.</p>',
     'MLPredictions':'<p>- <b><a href="MLPredictionProperati/interactiveModels.html" target="blank">Mapa interactivo</a></b> comparando modelos de regresión kNN para real estate.\
         Notebooks: <b><a href="https://github.com/iamlucasmateo/dsHousingPrediction/blob/master/Notebooks/Mercado%20Inmobiliario%20-%20kNN%20Models.ipynb" target="blank">  modelos tipo kNN</a></b>,\
         <b><a href="https://github.com/iamlucasmateo/dsHousingPrediction/blob/master/Notebooks/Mercado%20Inmobiliario%20-%20Decision%20Tree%20Models.ipynb" target="blank">modelos con decision trees</a></b>, \
         <b><a href="https://github.com/iamlucasmateo/dsHousingPrediction/blob/master/Notebooks/Error%20Analysis%20-%20WIP.ipynb" target="blank">modelos de ensamble</a></b>.</p>\
-        <p>- <b><a href="https://github.com/iamlucasmateo/NLP-FeatureSelection">\
+        <p>- <b><a href="https://github.com/iamlucasmateo/NLP-FeatureSelection" target="blank">\
         Natural Language Processing</b></a> repository with an emphasis in feature selection filters.</p>',
     'mathAlgorithms': '<p>- <b><a href="Math&Algorithms/knnVisualization.html" target="blank">Interactive visualization</a></b> of a kNN algorithm.\
     <p>- Notebook  developing a <b><a href="https://github.com/iamlucasmateo/dsMathAlgorithm/blob/master/KNN/KNN%20algorithms.ipynb" target="blank">from-scratch kNN algorithm.</a></b></p>\
@@ -88,9 +88,9 @@ projLinksObj = {
     Microeconomic model</a></b> featuring the ROC curve as an optimization constraint.</p>\
     <p>- <b><a href="#">\
     Finance in Python</a></b> notebooks</p>\
-    <p>- Tableau workbooks: <b><a href="https://github.com/iamlucasmateo/Tableau/tree/master/Animation%20World%20Bank">\
+    <p>- Tableau workbooks: <b><a href="https://github.com/iamlucasmateo/Tableau/tree/master/Animation%20World%20Bank" target="blank">\
     World Bank data animation</a></b>, \
-    <b><a href="https://github.com/iamlucasmateo/Tableau/tree/master/Expansion%20Analysis%20-%20Startup">\
+    <b><a href="https://github.com/iamlucasmateo/Tableau/tree/master/Expansion%20Analysis%20-%20Startup" target="blank">\
     startup expansion analysis</b></a></p>',
     'walkingDirections':'<p>- <b><a href="WalkingDirections/walkingDirections.html" target="blank">First iteration</a></b> for this personalized Walking Tour app.',
     'webProjects':'<p>- <a href="https://codepen.io/lucasmateo/" target="blank"><b>Codepen projects</b></a> for FCC Front End certification</p>\
