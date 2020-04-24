@@ -14,6 +14,17 @@ body {
 
 h2 {
     font-family: 'Montserrat', serif;
+    text-align: center;
+    font-size:1.7em;
+    margin:0;
+}
+
+#topics-subtitle {
+    font-family: 'Montserrat', serif;
+    text-align: center;
+    font-size: 2em;
+    padding: 0.3em;
+    font-weight:bolder;
 }
 
 /* Navbar */
@@ -120,7 +131,7 @@ h2 {
 .subtitle {
     height:8vh;
     display:flex;
-    font-size:1.8em;
+    font-size:1.5em;
 }
 
 .project-cards-div {
@@ -185,14 +196,14 @@ h2 {
 }
 
 #project-links {
-    font-size: 1.2em;
-    line-height:220%;
+    font-size: 1em;
+    line-height:200%;
 } 
 
 #links-button {
     display:none;
     margin: 2px;
-    font-size:1em;
+    font-size:0.9em;
     color:#4C2347;
     background-color: #F4CEAD;
     border:1px solid #4C2347;
