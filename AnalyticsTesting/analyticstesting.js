@@ -5,9 +5,6 @@ function sendGAEvent(action,category,label){
     });
 };
 
-const title = document.getElementById('title')
-const subtitle = document.getElementById('subtitle')
-
 function sendGAClickEvent(element){
     element.addEventListener('click',function(event){
         const action = event.type;
@@ -16,3 +13,11 @@ function sendGAClickEvent(element){
         sendGAEvent(action,category,label);
     })
 }
+
+const title = document.getElementById('title')
+const subtitle = document.getElementById('subtitle')
+sendGAClickEvent(title);
+sendGAClickEvent(subtitle);
+
+
+
