@@ -11,6 +11,7 @@ function sendGAClickEvent(element){
         const category = 'AnalyticsTesting/analytics-testing';
         const label = this.textContent + '' + this.id;
         sendGAEvent(action,category,label);
+        console.log('Data sent');
     })
 }
 
