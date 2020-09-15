@@ -11,6 +11,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analytics Testing GTM</title>
+    <style>
+        #subtitle{
+            cursor:pointer;
+            padding:1rem;
+            background-color: lightgray;
+            width:200px;
+        }
+    </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -18,7 +26,11 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <h1 id="title" style="cursor:pointer">Page Title</h1>
-    <p id="subtitle" style="cursor:pointer">Subtitle</p>
+    <p id="subtitle">Subtitle</p>
+    <input type="number" id="event-value" name="event-value" value="50"><br>
+    <label for="event-label">Event Label:</label><br>
+    <input type="text" id="event-label" name="event-label" value="Default Label"><br>
+    <input type="button" value="Event Trigger" id="event-trigger">
 
     <script src="analyticstestinggtm.js"></script>
 </body>
