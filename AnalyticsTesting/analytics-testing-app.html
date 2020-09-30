@@ -27,6 +27,15 @@
     <input type="text" id="event-label" name="event-label" value="Default Label"><br>
     <input type="button" value="Event Trigger" id="event-trigger">
 
+    <script>
+        var eventValue = document.getElementById('event-value').value;
+        var eventTrigger = document.getElementById('event-trigger');
+        eventTrigger.addEventListener('click',function(){
+            console.log(eventValue);
+        })
+        
+    </script>
+
     <div id="section1" class="sections">
         <h2>Section 1</h2>
         <div class="section-content">
