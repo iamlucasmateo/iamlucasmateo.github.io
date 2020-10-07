@@ -32,3 +32,11 @@ body{
 #section3{
     background-color: coral;
 }
+
+.dlbutton {
+    padding:1rem;
+    color:black;
+    background-color: pink;
+    width:200px;
+    cursor:pointer;
+}
