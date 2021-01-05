@@ -26,8 +26,22 @@
                             gtag('js', new Date());
                             gtag('config', 'UA-165299163-1');`;
         gaScript2.innerHTML = gaScript2Text;
-        // domHead.appendChild(gaScript1);
+        domHead.appendChild(gaScript1);
         domHead.appendChild(gaScript2);
+        
+        /*
+        function sendPageview() {
+            if (!!ga) {
+                ga('send', 'pageview', location.pathname);
+                console.log('pageviewSent');
+            } else {
+                setTimeout(sendPageview, 250);
+            };
+        };
+
+        sendPageview();
+        */
+        
     
     </script>      
 
