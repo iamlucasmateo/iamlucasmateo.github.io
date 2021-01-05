@@ -2,19 +2,35 @@
 <html lang="en">
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165299163-1"></script>
+    <!--script async src="https://www.googletagmanager.com/gtag/js?id=UA-165299163-1"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'UA-165299163-1');
-    </script>
+    </script-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analytics Testing gtag</title>
 </head>
 <body>
+    <script>
+        var domHead = document.getElementsByTagName('head')[0];
+        var gaScript1 = document.createElement('script');
+        gaScript1.async = true;
+        gaScript1.src = 'https://www.googletagmanager.com/gtag/js?id=UA-165299163-1';
+        var gaScript2 = document.createElement('script');
+        var gaScript2Text = `window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+                            gtag('config', 'UA-165299163-1');`;
+        gaScript2.innerHTML = gaScript2Text;
+        // domHead.appendChild(gaScript1);
+        domHead.appendChild(gaScript2);
+    
+    </script>      
+
     <h1 id="title" style="cursor:pointer">Page Title</h1>
     <p id="subtitle" style="cursor:pointer">Subtitle</p>
     <label for="event-value">Event Value:</label><br>
