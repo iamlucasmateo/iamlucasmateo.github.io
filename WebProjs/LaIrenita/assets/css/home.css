@@ -1,0 +1,625 @@
+* {
+    margin: 0;
+    font-family: 'Gothic A1', sans-serif;
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    /* border: 1px solid red !important; */
+}
+
+/* Header */
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 10px 30px 10px 10px;
+    background-color: white;
+}
+
+.hamburger-line {
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    background-color: #454a46;    
+}
+
+.logo-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 170px;
+    position: relative;
+    top: 60px;
+}
+
+.logo-wrapper img {
+    height: 110px;
+}
+
+.separador-logo {
+    height: 40px;
+    margin: 20px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.square-bordo {
+    background-color: #943125;
+    height: 100%;
+    width: 50%;
+}
+
+@media (min-width: 800px) {
+    #header {
+        position: static;
+        width: 95vw;
+    }
+    .logo-wrapper {
+        height: 120px;
+        top: 10px;
+    }
+}
+
+/* Hero */
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.hero img {
+    max-width: 99vw;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 0 0;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: normal;
+    text-align: center;
+    color: #943125;
+    max-width: fit-content;
+    margin: 0 0 10px 0;
+}
+
+.subtitle {
+    font-size: 17px;
+}
+
+/* Cria */
+
+#cria-links {
+    background-image: url('../img/bckg-caballo.png');
+    background-repeat: no-repeat;   
+    height: 60vh;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 0 0 30px;
+    font-size: 20px;
+}
+
+@media (min-width: 800px) { 
+    #cria-links {
+        height: 80vh;
+        align-items: flex-end;
+        padding: 100px 200px 0 0;
+        font-size: 20px;
+        margin-top: 100px;
+    }
+}
+
+/* Menu links */
+
+.link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-numero {
+    font-size: 70px;
+}
+
+.link-nombre {
+    font-weight: 100;
+    width: 150px;
+    text-align: center;
+    font-size: 18px; 
+    margin-top: 20px;  
+}
+
+.h2-wrapper {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    width:200px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#cria-links a {
+    border: 1px solid pink;
+    padding: 10px 0;
+    margin: 15px 0;
+    width: 200px;
+    color: #454a46;
+    text-decoration: none;
+    text-align: center;
+}
+
+.menu-links {
+    display: none;
+}
+
+@media (min-width: 800px) {
+    .menu-links {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-evenly;
+        padding: 30px;
+        background-color: #454a46;
+    }
+
+    .menu-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 25px;
+    }
+}
+
+/* Pilar */
+
+.pilar__caballos-bckg {
+    background-image: url('../img/bckg-Pilar2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 30vh;
+    margin: 0px;    
+}
+
+@media (min-width: 800px) { 
+    .pilar__caballos-bckg {
+        background-size: contain;
+        height: 100vh;
+        background-position: center; 
+    }
+
+}
+
+.separador-trapecio {
+    background-color: #943125;
+    padding: 20px;
+    width: 50%;
+    position:relative;
+    bottom: 30px;
+    color: white;
+    text-align: center;  
+    letter-spacing: 15px; 
+    margin: auto;
+    transform: skew(-40deg);
+    position: relative;
+    top: -2em;
+}
+
+.pilar__title {
+    transform: skew(40deg);
+}
+
+/*  articulo */
+
+.pilar__articulo {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.pilar__articulo p {
+    margin:20px auto;
+    padding: 0;
+    text-align: justify;
+    width: 80vw;
+
+}
+
+.pilar__articulo a {
+    color: #943125;
+}
+
+.pilar__articulo h3 > span {
+    color: #943125;
+}
+
+.pilar__articulo h3 {
+    margin-top: 20px;
+}
+
+.pilar__img-div {
+    margin-top: 30px;
+}
+
+@media (min-width: 800px) { 
+    .pilar__articulo {
+        flex-direction:row;
+        justify-content: center;
+        align-items: center;
+        padding: 0 120px;
+    }
+    
+    .pilar__articulo p {
+        margin:20px 0;
+        padding: 0 200px 0 0;
+        text-align: justify;
+        width: 50vw;
+    }
+
+    .pilar__img-div {
+        margin-top: 0;
+    }
+}
+/* centro */
+
+#pilar__centro {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.pilar__centro-img-div {
+    display: flex;
+    justify-content: center;
+}
+
+.pilar__centro-img-div img {
+    width: 800px;
+    max-width: 99vw;
+}
+
+#pilar__centro h3 {
+    background-color: #454a46;
+    color: white;
+    padding: 22px 0;
+    width: 80vw;
+    text-align: center;
+    letter-spacing: 7px;
+}
+
+.square-gris {
+    background-color:#454a46;
+    height: 30px;
+    width: 80vw;
+}
+
+@media (min-width: 800px) { 
+    #pilar__centro h3 {
+        width: 50vw;
+    }
+
+    .square-gris {
+        width: 50vw;
+    }
+    
+}
+
+/* Venta */
+
+#venta {
+    background-image: url('../img/bckg-caballos-BW.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    padding: 100px 0;
+    text-align: center;
+}
+
+#venta h2 {
+    background-color: rgba(255,255,255,0.5);
+    color: black;
+    margin: auto;
+    padding: 20px 0;
+    width: 90vw;
+    letter-spacing: 10px;
+    font-size: 30px;
+}
+
+@media (min-width: 800px) {
+    #venta {
+        height: 90vh;
+    }
+    #venta h2 {
+        width: 50vw;
+    }
+
+}
+
+/* Los Mac */
+
+#los-mac {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 20px 0;
+    padding: 0 10vw;
+}
+
+.los-mac__articulo {
+    margin: 20px 0px;
+}
+
+.los-mac__img-div {
+    margin-top: 10px;
+}
+
+#los-mac h4 {
+    color: #943125;
+    font-size: 30px;
+}
+
+#los-mac h5 {
+    color: #454a46;
+    font-size: 25px;
+    margin: 10px 0 10px 0;
+}
+
+#los-mac h3 {    
+    color: #454a46;
+    font-size: 45px;
+    margin: 10px 0 0 0;
+    text-align: center; 
+}
+
+.los-mac__text p {
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+@media (min-width: 800px) {
+    #los-mac {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 100px 80px;
+    }
+
+    #los-mac p {
+        margin:20px 0px;
+        padding: 0 20px 0 0;
+        text-align: justify;
+        color: #454a46;
+        width: 50vw;
+    }
+
+    #los-mac h4 {
+        font-size: 40px;
+        text-align: justify;
+    }
+
+    #los-mac h5 {
+        font-size: 25px;
+        margin: 40px 0 0 0;
+        text-align: justify;
+    }
+
+    #los-mac h3 {    
+        font-size: 47px;
+        margin: 50px 0 0 0; 
+    }
+
+    .los-mac__articulo {
+        display: flex;
+        margin: 70px 50px;
+        justify-content: center;
+    }
+
+    .los-mac__text {
+        order: 2;
+    }
+
+    .los-mac__text p {
+        margin-bottom: 0;
+        width: 500px;
+    }
+
+    .los-mac__img-div {
+        order: 1;
+        margin: 10px 60px;
+    }
+
+}
+
+/* Mapas y footer  */
+
+
+.mapas {
+    display:flex; 
+    flex-direction: column;
+    height: 80vh;
+    margin-top: 20px;  
+}
+
+.mapas__select-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.mapas__select-button {
+    padding: 10px 20px;
+    border: 1px solid #943125;
+}
+
+.mapas__button-active {
+    color: white;
+    background-color: #943125;
+    padding: 10px 20px;
+}
+
+.mapas__button-inactive {
+    color: #943125;
+    background-color: white;
+    padding: 10px 20px;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;       
+}
+
+.mapas__container-active {
+    display:flex;
+    justify-content: center;
+}
+
+.mapas__container-inactive {
+    display:none;
+}
+
+#map-pilar {
+    background-color: #454a46;
+    width: 100%;
+    height: 100%;
+}
+
+#map-daireaux {
+    background-color: #454a46;
+    width: 100%;
+    height: 100%;    
+}
+
+.map {
+    height: 80%;
+    width: 90%;
+    background-color: black;
+    overflow: visible;  
+    position: static;
+    contain: strict;
+    padding-bottom: 50px;    
+    margin-top: 18px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #454a46;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.mail-tel__active {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+}
+
+.mail-tel__inactive {
+    display: none;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    order: 2;
+}
+
+
+
+@media (min-width: 800px) {   
+    .mapas {
+        flex-direction: row;
+        margin-top: 100px;
+        height: 90vh;
+    }
+
+    .map {
+        height: 65%;
+        width: 70%;
+        background-color: black;
+        overflow: visible;  
+        position: relative;
+        top: -70px;  
+        contain: strict;
+        padding-bottom: 50px;    
+        margin-top: 18px;
+        border: 1px solid #aaa;
+    }
+
+    #map-pilar {
+        background-color: #454a46;
+        width: 50%;
+        height: 100%;
+    }
+    
+    #map-daireaux {
+        background-color: #943125;
+        width: 50%;
+        height: 100%;    
+    }
+
+    .mapas__select-buttons {
+        display: none;
+    }
+
+    .map-container {
+        display:flex;
+        justify-content: center;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        top: -130px;
+        margin: 0;
+        width: 99%;
+        background-color: transparent;
+    }
+
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+        order: 2;
+        background-color: white;
+        padding: 30px 30px;
+        width: 20vw;
+    }
+
+    .footer-info a {
+        color: #454a46;
+    }
+
+    .mail-tel {
+        display: flex;
+        flex-direction: column;
+        width: 32vw;
+    }
+
+    #mail-daireaux {
+        order: 3;
+    }
+
+}
+
