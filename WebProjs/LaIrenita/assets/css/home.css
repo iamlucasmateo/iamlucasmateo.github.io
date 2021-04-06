@@ -1,9 +1,17 @@
+@font-face {
+    font-family: 'GothamHTF-Medium';
+    src: url('../fonts/GothamHTF-Medium.ttf') format('truetype'),
+         url('../fonts/GothamHTF-Medium.eot') format('embedded-opentype'),
+         url('../fonts/GothamHTF-Medium.otf') format('opentype'),
+         url('../fonts/GothamHTF-Medium.woff') format('woff');
+}
+
 * {
     margin: 0;
-    font-family: 'Gothic A1', sans-serif;
-    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: 'GothamHTF-Medium', sans-serif;
     /* border: 1px solid red !important; */
 }
+
 
 /* Header */
 
@@ -16,6 +24,7 @@
     justify-content: flex-end;
     padding: 10px 30px 10px 10px;
     background-color: white;
+    display: none;
 }
 
 .hamburger-line {
@@ -29,18 +38,18 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 170px;
+    height: 100px;
     position: relative;
     top: 60px;
 }
 
 .logo-wrapper img {
-    height: 110px;
+    height: 100px;
 }
 
 .separador-logo {
-    height: 40px;
-    margin: 20px 0 0 0;
+    height: 30px;
+    margin: 10px 0 0 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
