@@ -14,7 +14,7 @@ function changeActive(active, inactive, activeClass, inactiveClass) {
     active.classList.add(activeClass);
 };
 
-selectPilar.addEventListener('click',() => {
+selectPilar.addEventListener('click',function() {
     if (!isShowingPilar) {
         changeActive(mapPilar, mapDaireaux, 'mapas__container-active', 'mapas__container-inactive');
         changeActive(selectPilar, selectDaireaux, 'mapas__button-active', 'mapas__button-inactive');
@@ -23,7 +23,7 @@ selectPilar.addEventListener('click',() => {
     };
 });
 
-selectDaireaux.addEventListener('click',() => {
+selectDaireaux.addEventListener('click',function() {
     if (isShowingPilar) {
         changeActive(mapDaireaux, mapPilar, 'mapas__container-active', 'mapas__container-inactive');
         changeActive(selectDaireaux, selectPilar, 'mapas__button-active', 'mapas__button-inactive');

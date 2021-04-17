@@ -597,11 +597,8 @@ h1 {
 
 .map {
     height: 80%;
-    width: 90%;
-    background-color: black;
-    overflow: visible;  
+    width: 90%; 
     position: static;
-    contain: strict;
     padding-bottom: 50px;    
     margin-top: 18px;
 }
@@ -654,36 +651,30 @@ footer a {
         height: 90vh;
     }
 
+    .map-container {
+        display:flex;
+        justify-content: center;
+    }
+
     .map {
-        width: 70%;
-        height: 60vh;
-        overflow: visible;  
+        width: 40vw;
+        overflow: hidden;  
         position: relative;
         top: -70px;  
         padding-bottom: 50px;    
         margin-top: 18px;
-        border: 1px solid #aaa;
     }
 
     #map-pilar {
         background-color: #454a46;
-        width: 50%;
-        height: 100%;
     }
     
     #map-daireaux {
         background-color: #943125;
-        width: 50%;
-        height: 100%;    
     }
 
     .mapas__select-buttons {
         display: none;
-    }
-
-    .map-container {
-        display:flex;
-        justify-content: center;
     }
 
     footer {
