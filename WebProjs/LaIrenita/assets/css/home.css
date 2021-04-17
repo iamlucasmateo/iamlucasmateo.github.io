@@ -161,6 +161,7 @@ h1 {
         padding: 100px 200px 0 0;
         font-size: 20px;
         margin-top: 100px;
+        margin: -1px;
     }
 
     #cria-links .h2-wrapper {
@@ -215,6 +216,7 @@ h1 {
         justify-content:space-evenly;
         padding: 30px;
         background-color: #454a46;
+        margin: -1px;
     }
 
     .menu-links a {
@@ -236,9 +238,10 @@ h1 {
 
 @media (min-width: 800px) { 
     .pilar__caballos-bckg {
-        background-size: contain;
-        height: 100vh;
-        background-position: center; 
+        background-size: cover;
+        height: 80vh;
+        background-position: center;
+        margin: -1px; 
     }
 
 }
