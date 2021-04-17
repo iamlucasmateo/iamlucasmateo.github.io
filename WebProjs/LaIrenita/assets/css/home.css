@@ -25,6 +25,7 @@
     padding: 10px 10px 5px 85vw;
     background-color: white;
     display: block;
+    z-index: 1000;
 }
 
 .hamburger-line {
@@ -130,38 +131,52 @@ h1 {
 /* Cria */
 
 #cria-links {
-    background-image: url('../img/bckg-caballo.png');
-    background-repeat: no-repeat;   
-    height: 60vh;
+    padding: 30px 0 0 0;
+    height: 180px;
+    overflow: hidden;
+}
+
+
+.cria-links__links {
     display:flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 80px 0 0 30px;
-    font-size: 20px;
+    align-items: flex-end;
+    padding: 0 20px 0 0;
+    font-size: 12px;
+    position: relative;
+    top: -190px;
+}
+
+.cria-links__img img {
+    width: 95vw;
 }
 
 #cria-links a {
     border: 1px solid #943125;
-    padding: 12px 0;
-    margin: 15px 0;
-    width: 200px;
+    padding: 10px 0;
+    margin: 7px 0;
+    width: 150px;
     color: #454a46;
     text-decoration: none;
     text-align: center;
 }
 
 #cria-links .h2-wrapper {
-    width: 200px;
+    margin-bottom: 10px;
+    width: 150px;
 }
 
 @media (min-width: 800px) { 
     #cria-links {
-        height: 80vh;
+        padding: 30px 0 0 0;
+        height: 650px;
+    }
+
+    .cria-links__links {
         align-items: flex-end;
-        padding: 100px 200px 0 0;
+        padding: 10px 200px 0 0;
         font-size: 20px;
-        margin-top: 100px;
-        margin: -1px;
+        top: -480px;
     }
 
     #cria-links .h2-wrapper {
@@ -170,6 +185,8 @@ h1 {
 
     #cria-links a {
         width: 300px;
+        padding: 12px 0;
+        margin: 15px 0;
     }
 }
 
@@ -203,8 +220,6 @@ h1 {
     margin-bottom: 30px;
 }
 
-
-
 .menu-links {
     display: none;
 }
@@ -216,7 +231,6 @@ h1 {
         justify-content:space-evenly;
         padding: 30px;
         background-color: #454a46;
-        margin: -1px;
     }
 
     .menu-links a {
@@ -427,27 +441,35 @@ h1 {
 }
 
 .los-mac__articulo {
-    margin: 20px 0px;
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.los-mac__text {
+    order: 1;
+    margin-top: 15px;
 }
 
 .los-mac__img-div {
     margin-top: 10px;
+    order: 0;
 }
 
 #los-mac h4 {
     color: #943125;
-    font-size: 30px;
+    font-size: 27px;
 }
 
 #los-mac h5 {
     color: #454a46;
-    font-size: 25px;
+    font-size: 20px;
     margin: 10px 0 10px 0;
 }
 
 #los-mac h3 {    
     color: #454a46;
-    font-size: 45px;
+    font-size: 40px;
     margin: 10px 0 0 0;
     text-align: center; 
 }
@@ -492,6 +514,7 @@ h1 {
 
     .los-mac__articulo {
         display: flex;
+        flex-direction: row;
         margin: 70px 50px;
         justify-content: center;
     }
@@ -583,6 +606,14 @@ h1 {
     margin-top: 18px;
 }
 
+.map__gray-bckg {
+    background-color: #454a46;
+}
+
+.map__red-bckg {
+    background-color: #943125;
+}
+
 footer {
     display: flex;
     flex-direction: column;
@@ -624,13 +655,11 @@ footer a {
     }
 
     .map {
-        height: 65%;
         width: 70%;
-        background-color: black;
+        height: 60vh;
         overflow: visible;  
         position: relative;
         top: -70px;  
-        contain: strict;
         padding-bottom: 50px;    
         margin-top: 18px;
         border: 1px solid #aaa;
