@@ -12,6 +12,57 @@
     /* border: 1px solid red !important; */
 }
 
+ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+
+a {
+    text-decoration: none;
+    color:inherit;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+/* Mobile Menu */
+
+#mobile-menu {
+    transition:all 0.5s ease;
+    padding-top: 10px;
+    height:75vh;
+    width:100vw;
+    background-color: white;
+    color: #454a46;
+    position:fixed;
+    top:0;
+    left:0;
+    display:none;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    z-index:2000;
+    font-family: "clanOTNarrowMedium";
+}
+
+.mobile-menu__close {
+    align-self: flex-end;
+    padding: 10px 20px 0 0;
+    font-size: 25px;
+}
+
+.mobile-menu__logo-div img {
+    width: 75px;
+}
+
+.mobile-menu__item {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 20px;
+}
 
 /* Header */
 
@@ -169,7 +220,7 @@ h1 {
 @media (min-width: 800px) { 
     #cria-links {
         padding: 30px 0 0 0;
-        height: 650px;
+        height: 450px;
     }
 
     .cria-links__links {
@@ -190,35 +241,32 @@ h1 {
     }
 }
 
+@media (min-width: 900px) { 
+    #cria-links {
+        height: 500px;
+    }
+}
+
+@media (min-width: 1000px) { 
+    #cria-links {
+        height: 550px;
+    }
+}
+
+@media (min-width: 1050px) { 
+    #cria-links {
+        height: 600px;
+    }
+}
+
+@media (min-width: 1150px) { 
+    #cria-links {
+        height: 630px;
+    }
+}
 /* Menu links */
 
-.link {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
-.link-numero {
-    font-size: 70px;
-}
-
-.link-nombre {
-    font-weight: 100;
-    width: 150px;
-    text-align: center;
-    font-size: 18px; 
-    margin-top: 20px;  
-}
-
-.h2-wrapper {
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    width:200px;
-    text-align: center;
-    margin-bottom: 30px;
-}
 
 .menu-links {
     display: none;
@@ -229,7 +277,7 @@ h1 {
         display: flex;
         flex-direction: row;
         justify-content:space-evenly;
-        padding: 30px;
+        padding: 30px 10vw;
         background-color: #454a46;
     }
 
@@ -237,6 +285,36 @@ h1 {
         color: white;
         text-decoration: none;
         font-size: 25px;
+        margin: 0 30px;
+    }
+
+    .link {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .link-numero {
+        font-size: 70px;
+        text-align: center;
+    }
+    
+    .link-nombre {
+        font-weight: 100;
+        width: 150px;
+        text-align: center;
+        font-size: 18px; 
+        margin-top: 20px;  
+    }
+    
+    .h2-wrapper {
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        width:200px;
+        text-align: center;
+        margin-bottom: 30px;
     }
 }
 
@@ -338,7 +416,14 @@ h1 {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 50px 0 40px 0;
+    margin: 10px 0 40px 0;
+}
+
+#pilar__centro h2 {
+    color: #454a46;
+    font-size: 90px;
+    align-self: flex-end;
+    padding: 10px 10px;
 }
 
 .pilar__centro-img-div {
@@ -374,18 +459,35 @@ h1 {
     display: block;
 }
 
-@media (min-width: 800px) { 
+@media (min-width: 800px) {
+    #pilar__centro {
+        margin-top: 5px;
+        align-items: flex-start;
+        padding-left: 15vw;
+    }
+
+    #pilar__centro h2 {
+        color: #454a46;
+        font-size: 90px;
+        position: relative;
+        top: 70px;
+        align-self: flex-end;
+        margin-right: 25vw;
+    }
+
     #pilar__centro h3 {
         width: 600px;
+        line-height: 25px;
+        padding: 22px 0;
     }
 
     .square-gris {
         width: 600px;
     }
 
-    #pilar__centro h3 {
-        line-height: 25px;
-        padding: 22px 0;
+    .pilar__centro-img-div {
+        position: relative;
+        left: -50px;
     }
 
     .pilar__texto h3 {
@@ -440,6 +542,31 @@ h1 {
     padding: 0 10vw;
 }
 
+#los-mac h2 {    
+    color: #454a46;
+    font-size: 70px;
+    margin: 5px 0 0 0;
+    text-align: center; 
+}
+
+#los-mac h3 {    
+    color: #454a46;
+    font-size: 40px;
+    margin: 10px 0 0 0;
+    text-align: center; 
+}
+
+#los-mac h4 {
+    color: #943125;
+    font-size: 27px;
+}
+
+#los-mac h5 {
+    color: #454a46;
+    font-size: 20px;
+    margin: 10px 0 10px 0;
+}
+
 .los-mac__articulo {
     margin: 10px 0px;
     display: flex;
@@ -456,24 +583,6 @@ h1 {
     order: 0;
 }
 
-#los-mac h4 {
-    color: #943125;
-    font-size: 27px;
-}
-
-#los-mac h5 {
-    color: #454a46;
-    font-size: 20px;
-    margin: 10px 0 10px 0;
-}
-
-#los-mac h3 {    
-    color: #454a46;
-    font-size: 40px;
-    margin: 10px 0 0 0;
-    text-align: center; 
-}
-
 .los-mac__text p {
     margin-bottom: 30px;
     text-align: justify;
@@ -485,15 +594,19 @@ h1 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 100px 80px;
+        margin: 100px 80px 40px 80px;
     }
 
-    #los-mac p {
-        margin:20px 0px;
-        padding: 0 20px 0 0;
-        text-align: justify;
+    #los-mac h2 {    
         color: #454a46;
-        width: 50vw;
+        font-size: 100px;
+        margin: 5px 0 0 0;
+        text-align: center; 
+    }
+
+    #los-mac h3 {    
+        font-size: 47px;
+        margin: 50px 0 0 0; 
     }
 
     #los-mac h4 {
@@ -507,15 +620,18 @@ h1 {
         text-align: justify;
     }
 
-    #los-mac h3 {    
-        font-size: 47px;
-        margin: 50px 0 0 0; 
+    #los-mac p {
+        margin:20px 0px;
+        padding: 0 20px 0 0;
+        text-align: justify;
+        color: #454a46;
+        width: 50vw;
     }
 
     .los-mac__articulo {
         display: flex;
         flex-direction: row;
-        margin: 70px 50px;
+        margin: 45px 50px;
         justify-content: center;
     }
 
@@ -537,6 +653,13 @@ h1 {
 
 /* Mapas y footer  */
 
+.mapas__title {
+    text-align: center;
+    font-size: 30px;
+    color: #454a46;
+    font-size: 35px;
+    text-align: center; 
+}
 
 .mapas {
     display:flex; 
@@ -617,12 +740,18 @@ footer {
     align-items: center;
     background-color: #454a46;
     text-align: center;
-    padding-bottom: 20px;
+    height: 35vh;
+    z-index: 1000;
+    color: black;
+    position: relative;
+    padding: 20px 0 20px 0;
+    background-color: #454a46;
 }
 
 footer a {
     color: white;
     text-decoration: none;
+    margin: 10px;
 }
 
 .mail-tel__active {
@@ -640,15 +769,34 @@ footer a {
     flex-direction: column;
     width: 60vw;
     order: 2;
+    background-color: white;
+    padding: 20px 30px 20px 30px;
+    font-size: 15px;
+    color: #454a46;
+    margin: 10px 0 0 0;
 }
 
+.footer-info a {
+    color: #454a46;
+}
 
+.map iframe {
+    width: 100%;
+}
 
-@media (min-width: 800px) {   
+@media (min-width: 800px) {
+    .mapas__title {
+        text-align: center;
+        font-size: 30px;
+        color: #454a46;
+        font-size: 40px;
+        text-align: center; 
+    }
+
     .mapas {
         flex-direction: row;
         margin-top: 100px;
-        height: 90vh;
+        height: 130vh;
     }
 
     .map-container {
@@ -658,10 +806,10 @@ footer a {
 
     .map {
         width: 40vw;
+        height: 90vh;
         overflow: hidden;  
         position: relative;
-        top: -70px;  
-        padding-bottom: 50px;    
+        top: -70px;      
         margin-top: 18px;
     }
 
@@ -678,11 +826,13 @@ footer a {
     }
 
     footer {
+        height: 0;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: flex-start;
         position: relative;
-        top: -130px;
+        top: -39vh;
         margin: 0;
         width: 99%;
         background-color: transparent;
@@ -693,22 +843,33 @@ footer a {
         flex-direction: column;
         order: 2;
         background-color: white;
-        padding: 30px 30px;
-        width: 20vw;
+        padding: 30px 30px 30px 30px;
+        width: 35vw;
+        font-size: 22px;
     }
 
     .footer-info a {
         color: #454a46;
+        margin-top: 15px;
     }
 
     .mail-tel {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         width: 32vw;
+    }
+
+    .mail-tel a {
+        margin-top: 15px;
     }
 
     #mail-daireaux {
         order: 3;
+    }
+
+    .map iframe {
+        height: 100%;
     }
 
 }

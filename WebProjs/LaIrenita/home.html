@@ -12,6 +12,29 @@
 </head>
 <body>
     <div class="site-wrapper">
+        <section id="mobile-menu">
+            <div class="mobile-menu__close">X</div>
+            <div class="mobile-menu__logo-div">
+                <img src="assets/img/icon-logo.png" alt="Logo La Irenita">
+            </div>
+            <ul class="mobile-menu__items">
+                <li class="mobile-menu__item">
+                    <a href="#cria-links" class="mobile-menu__link">CRIA</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="#pilar" class="mobile-menu__link">PILAR</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="#pilar__centro" class="mobile-menu__link">CENTRO</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="#venta" class="mobile-menu__link">VENTA DE PRODUCTO</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="#los-mac" class="mobile-menu__link">MAC DONOUGH</a>
+                </li>
+            </ul>
+        </section>
         <section id="header">
             <div class="hamburger-menu">
                 <div class="hamburger-line"></div>
@@ -47,23 +70,23 @@
             </div>
         </section>
         <section class="menu-links">
-            <a href="#cria-links" class="link">
+            <a href="#cria-links" class="menu__link">
                 <div class="link-numero">01</div>
                 <div class="link-nombre">CRÍA</div>
             </a>
-            <a href="#pilar" class="link">
+            <a href="#pilar" class="menu__link">
                 <div class="link-numero">02</div>
                 <div class="link-nombre">PILAR</div>
             </a>
-            <a href="#pilar__centro" class="link">
+            <a href="#pilar__centro" class="menu__link">
                 <div class="link-numero">03</div>
                 <div class="link-nombre">CENTRO</div>
             </a>
-            <a href="#venta" class="link">
+            <a href="#venta" class="menu__link">
                 <div class="link-numero">04</div>
                 <div class="link-nombre">VENTA DE PRODUCTO</div>
             </a>
-            <a href="#los-mac" class="link">
+            <a href="#los-mac" class="menu__link">
                 <div class="link-numero">05</div>
                 <div class="link-nombre">MAC DONOUGH</div>
             </a>
@@ -85,6 +108,7 @@
                 </div>
             </article>
             <div id="pilar__centro">
+                <h2>03</h2>
                 <h3>CENTRO DE TRANSFERENCIA EMBRIONARIA</h3>
                 <div class="pilar__centro-img-div">
                     <img src="assets/img/bckg-caballos__700x467.jpg" alt="" srcset="">
@@ -92,20 +116,21 @@
                 <div class="square-gris"></div>
             </div>
         </section>
-            <article class="pilar__articulo">
-                <div class="pilar__texto">
-                    <h3> <span>SEBASTIAN BERETERBIDE /</span> VETERINARIO</h3>
-                    <p>La Irenita es líder del mercado de producción de embriones en Argentina y a nivel mundial, habiendo logrado más de 10.000 embriones y teniendo un 100% de eficiencia en el sexado.</p>
-                    <p>Posee una variada oferta tanto en técnicas como genética, ésta última basada en la amplia variedad de Padrillos. Su director, MV Sebastián Bereterbide y su mujer, MV Lucila Carbonell Hervás, residen en el Centro junto a su equipo y han logrado una gran eficiencia en la obtención exitosa de embriones basada en una constante incorporación de las más modernas técnicas.</p>
-                </div>
-                <div class="pilar__img-div">
-                    <img src="assets/img/ph-Vet.png" alt="">
-                </div>
-            </article>
+        <article class="pilar__articulo">
+            <div class="pilar__texto">
+                <h3> <span>SEBASTIAN BERETERBIDE /</span> VETERINARIO</h3>
+                <p>La Irenita es líder del mercado de producción de embriones en Argentina y a nivel mundial, habiendo logrado más de 10.000 embriones y teniendo un 100% de eficiencia en el sexado.</p>
+                <p>Posee una variada oferta tanto en técnicas como genética, ésta última basada en la amplia variedad de Padrillos. Su director, MV Sebastián Bereterbide y su mujer, MV Lucila Carbonell Hervás, residen en el Centro junto a su equipo y han logrado una gran eficiencia en la obtención exitosa de embriones basada en una constante incorporación de las más modernas técnicas.</p>
+            </div>
+            <div class="pilar__img-div">
+                <img src="assets/img/ph-Vet.png" alt="">
+            </div>
+        </article>
         <section id="venta">
             <h2>VENTA DE PRODUCTOS</h2>
         </section>
-        <section id="los-mac"> 
+        <section id="los-mac">
+            <h2>05</h2> 
             <h3>LOS MACDONOUGH</h3>
             <article class="los-mac__articulo">
                 <div class="los-mac__text">
@@ -154,7 +179,7 @@
                 </div>
             </article>
         </section>
-
+        <div class="mapas__title">DONDE ESTAMOS</div>
         <section class="mapas">
             <div class="mapas__select-buttons">
                 <p class="mapas__select-button mapas__button-active" id="button-pilar">Pilar</p>
