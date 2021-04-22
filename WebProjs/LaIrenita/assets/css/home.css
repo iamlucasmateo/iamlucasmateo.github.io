@@ -373,21 +373,28 @@ h1 {
 
 .separador-trapecio {
     background-color: #943125;
-    padding: 20px;
+    padding: 10px;
     width: 50%;
-    position:relative;
-    bottom: 30px;
     color: white;
     text-align: center;  
-    letter-spacing: 15px; 
+    letter-spacing: 10px; 
     margin: auto;
     transform: skew(-40deg);
     position: relative;
-    top: -2em;
+    top: -28px;
+    font-size: 15px;
 }
 
 .pilar__title {
     transform: skew(40deg);
+}
+
+@media (min-width: 800px) {
+    .separador-trapecio {
+        padding: 12px;
+        font-size: 18px;
+        letter-spacing: 15px;
+    }
 }
 
 /*  articulo */
@@ -769,7 +776,7 @@ h1 {
 }
 
 .map__red-bckg {
-    background-color: #943125;
+    background-color: #454a46;
 }
 
 footer {
@@ -856,6 +863,14 @@ footer a {
     }
     
     #map-daireaux {
+        background-color: #943125;
+    }
+
+    .map__gray-bckg {
+        background-color: #454a46;
+    }
+    
+    .map__red-bckg {
         background-color: #943125;
     }
 
